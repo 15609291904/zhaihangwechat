@@ -1,0 +1,108 @@
+<!--pages/agreement/agreement.wxml-->
+<!-- <text>pages/agreement/agreement.wxml</text> -->
+ <view class='viewagree_body'>
+    <view class="clause_name">债权服务委托协议</view>
+    <view class="first_party">
+      <view class="first_party_title">甲方：</view>
+      <image style="max-height: 100px;" src='{{agreementdata.entrues_sign}}'></image>
+      <view class='flex'>
+        <view class="first_party_title">联系电话：</view>
+        <input class="first_party_phone" value="{{agreementdata.entrues_user_mobile}}"></input>
+      </view>
+    </view>
+    \n
+    <view class="second_party">
+      <text class="second_party_title">乙方：</text>
+      <image src='{{agreementdata.store_seal_img}}'></image>
+    </view>
+    \n
+    <text class="rules">现双方经充分协商一致，签订本合同，以资共同遵守：</text>
+    <view class="rule_box">
+      <text class="rule_box_title">条款一 甲方的委托事项：
+      </text>
+      <view class="rule_box_content">代表甲方进行债务解除或债务偿还等协商谈判。</view>
+    </view>
+    <view class="rule_box">
+      <text class="rule_box_title">条款二 乙方的义务：
+      </text>
+      <view class="rule_box_content">
+        <text class="rule_box_content_list">1、乙方为上述事务中甲方的专项代理人，甲方同意乙方委派其他员工或助理配合完成辅助工作，但乙方更换代理律应取得甲方认可；</text>
+        <text class="rule_box_content_list">2、乙方应当勤勉、尽责地完成甲方委托事项的工作；</text>
+        <text class="rule_box_content_list">3、乙方应当以其依据法律作出的判断，尽最大努力维护甲方的合法利益；</text>
+        <text class="rule_box_content_list">4、乙方应当在取得甲方提供的文件资料后，及时完成委托事项，并通报工作进程；</text>
+        <text class="rule_box_content_list">5、乙方在履行本合同期间，不得为与甲方有利益冲突的第三方提供不利于甲方的咨询意见；</text>
+        <text class="rule_box_content_list">6、乙方律师在涉及甲方的对抗性案件或者交易活动中，未经甲方同意，不得担任与甲方利益冲突的另一方的顾问或者代理人；</text>
+        <text class="rule_box_content_list">7、乙方律师对其获知的甲方商业秘密负有保密责任，非由法律规定或者甲方同意，不得向任何第三方披露；</text>
+        <text class="rule_box_content_list">8、乙方对甲方的原始证据、法律文件和财物应当妥善保管。如无文件、资料交接记录视为甲方向乙方所提供的所有资料为复印件。</text>
+      </view>
+    </view>
+    <view class="rule_box">
+      <text class="rule_box_title">条款三 甲方的义务：
+      </text>
+      <view class="rule_box_content">
+        <text class="rule_box_content_list">1、甲方应当真实、详尽、及时地向乙方代理人叙述相关情况，提供与委托代理事项有关的证据、文件及其它事实材料；</text>
+        <text class="rule_box_content_list">2、甲方应当积极、主动地配合乙方代理人的工作，甲方对乙方律师提出的要求应当明确、合理、合法；</text>
+        <text class="rule_box_content_list">3、甲方应当按时足额的向乙方支付代理费和工作费用；</text>
+        <text class="rule_box_content_list">4、甲方指定专门的联系人，负责转达甲方的指示和要求，提供文件和资料等，乙方向该联系人所进行的上述行为视为乙方向甲方所有成员进行的行为。甲方更换联系人应当及时通知乙方；</text>
+      </view>
+    </view>
+    <view class="rule_box">
+      <text class="rule_box_title">条款四 代理服务费：
+      </text>
+      <view class="rule_box_content servemoney">
+        甲方应向乙方支付代理服务费
+        <input class="serviceFee" value='{{agreementdata.broker_money}}'></input>元
+        <!-- （大写：
+        <input class="serviceFee_capital"></input>元） -->
+      </view>
+    </view>
+    <view class="rule_box">
+      <text class="rule_box_title">条款五 律师工作费用：
+      </text>
+      <view class="rule_box_content">
+        乙方代理人办理甲方委托代理事项所发生的下列费用，应当由甲方承担并及时支付；乙方代理人应当节俭、合理的使用，并向甲方提供单据或作必要的说明：
+        <text class="rule_box_content_list">1、相关行政、司法、鉴定、公证等部门收取的费用；</text>
+        <text class="rule_box_content_list">2、因本案而发生的差旅费、食宿费、翻译费等；</text>
+        <text class="rule_box_content_list">3、征得甲方同意后支出的其它费用；</text>
+      </view>
+    </view>
+    <view class="rule_box">
+      <text class="rule_box_title">条款六 合同的解除：
+      </text>
+      <view class="rule_box_content">
+        乙方代理人办理甲方委托代理事项所发生的下列费用，应当由甲方承担并及时支付；乙方代理人应当节俭、合理的使用，并向甲方提供单据或作必要的说明：
+        <text class="rule_box_content_list">1、甲、乙双方经协商一致，可以变更或者解除本合同。</text>
+        <text class="rule_box_content_list">2、乙方有下列情形之一的，甲方有权解除本合同：</text>
+        <text class="rule_box_content_list_rules">1）、未经甲方同意，擅自更换代理人的；</text>
+        <text class="rule_box_content_list_rules">2）、因乙方代理人工作失职导致甲方蒙受重大经济损失的；</text>
+        <text class="rule_box_content_list">3、甲方有下列情形之一的，乙方有权解除本合同；</text>
+        <text class="rule_box_content_list_rules">1）、甲方的委托事项违反法律或者违反律师执业规范的；</text>
+        <text class="rule_box_content_list_rules">2）、甲方有捏造事实、伪造证据或者隐瞒重要事实等情形的；</text>
+      </view>
+    </view>
+    <view class="rule_box">
+      <text class="rule_box_title">条款七 合同的终止：
+      </text>
+      <view class="rule_box_content">
+        <text class="rule_box_content_list">1、经甲、乙双方协商一致解除本合同，合同终止；</text>
+        <text class="rule_box_content_list">2、乙方完成了约定的代理事务时终止。</text>
+      </view>
+    </view>
+    <view class="rule_box">
+      <text class="rule_box_title">条款八 违约责任：
+      </text>
+      <view class="rule_box_content">
+        <text class="rule_box_content_list">1、乙方代理人因工作失误导致甲方蒙受重大实际损失，或者违反第二条第五七项规定的义务之一的，乙方应当向甲方承担赔偿责任。</text>
+        <text class="rule_box_content_list">2、甲方无正当理由不支付工作费用，或者单方擅自解除合同，乙方有权要求甲方支付未付的工作费用，前述费用不因本协议的解除而免除。</text>
+      </view>
+    </view>
+    <view class='viewagree_sure'>
+      <view class='canvas_title'>委托人签字：</view>
+      <!-- <canvas style="width: 100%;border:1px solid #000; height: 200px;" canvas-id="firstCanvas"></canvas> -->
+      <canvas class="handWriting" style="width: 100%;border:1px solid #000; height: 200px;" disable-scroll="true" bindtouchstart="uploadScaleStart" bindtouchmove="uploadScaleMove" bindtouchend="uploadScaleEnd" bindtap="mouseDown" canvas-id="handWriting"></canvas>
+      <view class='canvas_btn'>
+        <button class='canvas_btn_btn clear_canvas' bindtap='retDraw'>清除签名</button>
+        <button class='canvas_btn_btn send_claim' bindtap='sendclaimto'>确认提交</button>
+      </view>
+    </view>
+  </view>

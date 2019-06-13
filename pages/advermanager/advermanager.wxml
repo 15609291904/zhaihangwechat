@@ -1,0 +1,34 @@
+<!--pages/advermanager/advermanager.wxml-->
+<!-- <text>pages/advermanager/advermanager.wxml</text> -->
+<view class='advermanager_body'>
+  <view class='advert_card' wx:if="{{advinfo.adv}}">
+    <view class='broker_info'>
+      <view class='broker_info_left'>
+        <image src='{{advinfo.avatar}}'></image>
+      </view>
+      <view class='broker_info_center'>
+        <view class='broker_info_centerv1'>
+          <text class='broker_info_centerv1_name'>{{advinfo.real_name}}</text>
+          <view class='iconfont icon-mingpian'></view>
+          <text class='score'>{{advinfo.score}}分</text>
+        </view>
+        <view class='broker_info_skill'>
+          <text class='skill_title' wx:for="{{advinfo.labels}}" wx:key="{{index}}">{{item.name}}</text>
+        </view>
+        <view class='broker_info_intro'>{{advinfo.bio}}</view>
+      </view>
+      <view class='broker_info_right'>
+        <view class='broker_info_right_price'>￥<text>{{consult_amount}}</text></view>
+        <text class='price_title'>定金（元）</text>
+      </view>
+    </view>
+    <view class='advert_btnbox'>
+      <view class='advert_btn advert_btn2' bindtap='deleteadv'>删除</view>
+      <view class='advert_btn advert_btn2' bindtap='reload'>刷新</view>
+      <view class='advert_btn' bindtap='editadv'>编辑修改</view>
+    </view>
+  </view>
+  <view wx:if="{{!advinfo.adv}}" class='advermanager_btn' bindtap='editadv'>
+    + 发广告
+  </view>
+</view>

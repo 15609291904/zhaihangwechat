@@ -1,0 +1,26 @@
+<!--pages/caseshow/caseshow.wxml-->
+<view class='caseshow_body'>
+  <view class='caseshow_box' bind:tap="todetail" wx:for="{{claimlist}}" wx:key="{{index}}" data-casedetailid="{{item.id}}">
+    <view class='caseshow_top'>
+      <text class='caseshow_top_type'>{{item.claim_type[0]}}</text>
+      <text class='caseshow_top_id'>{{item.claim_num}}</text>
+      <view class='caseshow_top_pro'>{{item.claim_type[1]}}</view>
+    </view>
+    <view class='caseshow_middle'>
+      <view class='caseshow_middle_box'>
+        <text class='capital'>{{item.amount|Int}}</text>
+        <text class='caseshow_text_title'>本金（元）</text>
+      </view>
+      <view class='caseshow_line'></view>
+      <view class='caseshow_middle_box'>
+        <text class='interest'>{{item.interest|Int}}</text>
+        <text class='caseshow_text_title'>利息（元）</text>
+      </view>
+      <view class='caseshow_line'></view>
+      <view class='caseshow_middle_box'>
+        <view class='caseshow_time'>{{item.loan_expire|Int}}<text>年</text></view>
+        <text class='caseshow_text_title'>借款周期</text>
+      </view>
+    </view>
+  </view>
+</view>

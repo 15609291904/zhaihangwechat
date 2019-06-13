@@ -1,0 +1,68 @@
+/* pages/aboutus/aboutus.wxss */
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1558591442604'); /* IE9 */
+  src: url('iconfont.eot?t=1558591442604#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAKAAAsAAAAABiwAAAIzAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCCcAooRgE2AiQDCAsGAAQgBYRtBz8bewURBTzJfh7YbtF2tlDyv3G4Et38tGgkI+k9x8PXWPr+7t5lD1TAAarkVCYeSkhCAavW6QpZV8kSSR9jwKkO4QyrvP/TdnvrKFyn4yzLT9uZ3+78l+aWVQiJMCAkQtJGUGnSfJ7L6U2gA5kf6FyvOWmsSZMGUC8OKNA9MIqsgEJuGLvgBT4m0DauJ9awZY+qsFcF4krnT6qFqKKwQhWaDQeLeKahpifpB0+j78dXC1FJGpndsuPc2jOWP3Sdkny7P0cCQoyAjjeQ0UMh9jRmt8mCcVk7W0xzrMbgQ+73A484qlOwv86u74JRmAs+ZG+lAAkeizLcmfQk0bzs2TM7zx/++XBPqq9ahtH0Iv3SfxU8n/tLb+l/7RTwqnvgyFEM81M38wWfrw4cKIbWdqeiqY3jSfOwbW1t9OHgoPdTbSPXKoZqZIJ/wFiGrJolC9tDQ8cimqoltM1bf7xjyC1ZlBbmPAAI2coXOha+0bXyS/bYP/Qd/GNgFV1MfMb2wqm7yCYPjIFgDOENsohq5XplEje+YnIqA85rI/4TuckS4Jh2ufCCNfISW5pz4oooUEwVPIPnsCwJNFOOkZipiD5almp6kxlR1Zp4wFBAoBgI3YBMhNRUMFlMKp9/hRInpQB39NWVnxBrZLMDh8keQL6Y6kF9j/JK4yzhEkIBCiMV8AzmoVKJAN08L4ciwpROSGtHljNKDTWZ21uqvzsFbbY9hXNPtj/JTBeDsyQVIyJ9852tFgAAAA==') format('woff2'),
+  url('iconfont.woff?t=1558591442604') format('woff'),
+  url('iconfont.ttf?t=1558591442604') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('iconfont.svg?t=1558591442604#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow-right-copy-copy:before {
+  content: "\e603";
+}
+
+
+.aboutus_body{
+  padding: 0 12px;
+}
+.about_logo {
+  width: 100%;
+  padding-top: 20px
+}
+.about_logo .logo{
+  display: block;
+  width: 70px;
+  height: 70px;
+  margin: 40px auto 0;
+}
+.about_logo text{
+  display: block;
+  font-weight: 600;
+  font-size: 18px;
+  color: #000;
+  text-align: center;
+  line-height: 54px;
+  margin-bottom: 20px;
+}
+.aboutus_list{
+  padding: 0 12px;
+  box-sizing: border-box;
+}
+.aboutus_list_li{
+  width: 100%;
+  height: 44px;
+  line-height: 44px;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  border-bottom: 2px solid #fafafa;
+}
+.aboutus_list_li_left{
+  font-size: 14px;
+  color: #11101c;
+  font-weight: 600;
+}
+.aboutus_list_li_right{
+  color: #9d9d9d;
+  font-size: 14px;
+  display: flex;
+}

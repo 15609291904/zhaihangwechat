@@ -1,0 +1,103 @@
+<!--pages/casedetail/casedetail.wxml-->
+<!-- <text>pages/casedetail/casedetail.wxml</text> -->
+<view class='casedetail_body'>
+  <view class='casedetail_header'>
+    <view class='casedetail_info_title'>{{claimdetail.claim_type[0]}}</view>
+    <view class='casedetail_info_number'>{{claimdetail.claim_num}}</view>
+  </view>
+  <view class='casedetail_info_price'>
+    <view class='casedetail_info_price1'>
+      <view>{{claimdetail.amount|Int}}</view>
+      <text>本金（元）</text>
+    </view>
+    <view class='casedetail_line'></view>
+    <view class='casedetail_info_price2'>
+      <view>{{claimdetail.interest|Int}}</view>
+      <text>利息（元）</text>
+    </view>
+    <view class='casedetail_line'></view>
+    <view class='casedetail_info_price3'>
+      <view class='casedetail_info_time'>{{claimdetail.loan_expire|Int}}<text>年</text></view>
+      <text>借款周期</text>
+    </view>
+  </view>
+  <view class='claims_deatil'>
+    <view class='claims_deatil_header'>债权详情</view>
+    <view class='claims_deatil_list'>
+      <view class='claims_deatil_li'>
+        <text class='claims_deatil_li_q'>债权人</text>
+        <text class='claims_deatil_li_a'>{{claimdetail.claim_man}}</text>
+      </view>
+      <view class='claims_deatil_li'>
+        <text class='claims_deatil_li_q'>债权人联系方式</text>
+        <text class='claims_deatil_li_a'>{{claimdetail.claim_mobile}}</text>
+      </view>
+      <view class='claims_deatil_li'>
+        <text class='claims_deatil_li_q'>债务人</text>
+        <text class='claims_deatil_li_a'>{{claimdetail.debt_man}}</text>
+      </view>
+      <view class='claims_deatil_li'>
+        <text class='claims_deatil_li_q'>债务人联系方式</text>
+        <text class='claims_deatil_li_a'>{{claimdetail.debt_mobile}}</text>
+      </view>
+      <view class='claims_deatil_li'>
+        <text class='claims_deatil_li_q'>债权种类</text>
+        <text class='claims_deatil_li_a'><text>{{claimdetail.claim_type[0]}}</text>/<text>{{claimdetail.claim_type[1]}}</text></text>
+      </view>
+      <view class='claims_deatil_li'>
+        <text class='claims_deatil_li_q'>期望还款需求</text>
+        <text class='claims_deatil_li_a'>{{claimdetail.appeal_type[0]}}</text>
+      </view>
+      <view class='claims_deatil_li'>
+        <text class='claims_deatil_li_q'>债权发生地</text>
+        <text class='claims_deatil_li_a'>{{claimdetail.city_name}}</text>
+      </view>
+      <view class='claims_deatil_li'>
+        <text class='claims_deatil_li_q'>发布日期</text>
+        <text class='claims_deatil_li_a'>{{createtime}}</text>
+      </view>
+    </view>
+  </view>
+  <view class='attach_pic'>
+    <view class='claims_deatil_header'>附件图片</view>
+    <view class='attach_pic_box'>
+      <image src='{{claimdetail.files[0]}}'></image>
+      <image src='{{claimdetail.files[1]}}'></image>
+    </view>
+  </view>
+  <view class='claims_rate'>
+    <view class='claims_deatil_header'>债权进度</view>
+    <view class='claims_deatil_rate'>
+      <view class='claims_deatil_rate_li' wx:if="{{claimdetail.donetime}}">
+        <view class='claims_deatil_rate_li_left'>
+          <text class='claims_deatil_rate_li_left1'>{{donetime_data}}</text>
+          <text class='claims_deatil_rate_li_left2'>{{donetime_time}}</text>
+        </view>
+        <view class='yuan1'>
+          <view class='yuan2'></view>
+        </view>
+        <view class='create_claim'>处理完成</view>
+      </view>
+      <view class='claims_deatil_rate_li' wx:if="{{claimdetail.ordertime}}">
+        <view class='claims_deatil_rate_li_left'>
+          <text class='claims_deatil_rate_li_left1'>{{ordertime_data}}</text>
+          <text class='claims_deatil_rate_li_left2'>{{ordertime_time}}</text>
+        </view>
+        <view class='yuan1'>
+          <view class='yuan2'></view>
+        </view>
+        <view class='create_claim'>经纪人已接单</view>
+      </view>
+      <view class='claims_deatil_rate_li'>
+        <view class='claims_deatil_rate_li_left'>
+          <text class='claims_deatil_rate_li_left1'>{{createtime_data}}</text>
+          <text class='claims_deatil_rate_li_left2'>{{createtime_time}}</text>
+        </view>
+        <view class='yuan1'>
+          <view class='yuan2'></view>
+        </view>
+        <view class='create_claim'>已发布</view>
+      </view>
+    </view>
+  </view>
+</view>

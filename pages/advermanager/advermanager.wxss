@@ -1,0 +1,139 @@
+/* pages/advermanager/advermanager.wxss */
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1558664173083'); /* IE9 */
+  src: url('iconfont.eot?t=1558664173083#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAMwAAsAAAAABzAAAALiAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCCcAqCOIIsATYCJAMICwYABCAFhG0HMhtUBhHVk5Fkf4I4bjoFLMUiSShsSuX0QU9z3/s1mh7CcDfu+aB0oAT0AgAAAADy/x1jf9+MsSFqDU/qiVAgJHFNbokMiYQ3PHFI0Pj1EwDXvI9VCIxgDTQsi9TxMApoTPPozbmqe/51hBrJ90AKfSEpDbM8fWPD8S0+Z1ns4w3DXcrg7z3qhZjlAU/HX2y8dIeN6NLU1gczl6vy/2GgL7ICFwVATmU0ZEWm/cUxdSmeDzSXjKSk3bx5QAPrxArxDWhgvGHsJsqD2A8EMEIkoWb7+lBpAhhGAJpPglHplJ0gtJBGVMncGJ0pQYcbvqEww79PL12QBkZGQEb1cOdV9QZGVL+3SxHEGO8wAJAADkgCCKBOqb5SFPqTcMbxxyJgXakE36D01f7xAAJKAslOACBIpJ8TAzNP9ZcMAAiAAjSDzl6RgKr4O5bByg5W25hgPYzZNnAKKeStl/j6Wdfdqau1tSMTtdg7y3t7PjHjs7LSe2rtLt1TfSiPXttF2tvLKplIH5TJltfNf1zVMMlymLCkGBlyxyVa+VW2JX/1T8G/ZwXwZ6n6ha8hV4JeV2JpMpat2ENySRHBHZKXoN5GrZIrMHm5QZ1BFXDyM5/8g9/gIvw373+YiwHAc/KRpUI7I+gzNRC8cUbLEuGygILFNqM0zDRL3kmWYQD/ZbOHj75i79sLE837Jo0OgmPgtCikwCaBZKWAomWBkahoseWpXoTiDCDBkADEzTkwLi6Bc3OLFNh3kHz8gOIWRGDUBLSmxVkAnYxG0IP9Q3LTSEglOki9YXj3hpMsjnshr8kFbdVkQwcckceYsH5CJ0JAPA2wFw7Dvp9g5imjkyqKzNu6prI7VW4alJaMRtAD+wfJTSPR5qJzn79hePeGa4o65C/kNbUPWpWmBfLAH1sVXcsx6yd0RAgQTwPYC1rsoX8Cc3mvjE4qsYd33qqlctSWX80vHJ5uC2QBSRjA7hFcpDHMyYxKAQAA') format('woff2'),
+  url('iconfont.woff?t=1558664173083') format('woff'),
+  url('iconfont.ttf?t=1558664173083') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('iconfont.svg?t=1558664173083#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-mingpian:before {
+  content: "\e753";
+}
+
+
+.advermanager_body{
+  padding: 12px;
+}
+.advermanager_btn{
+  width: 100%;
+  height: 150px;
+  border-radius: 6px;
+  box-shadow: 0 4px 6px #e2e1e1;
+  font-size: 20px;
+  color: #f99600;
+  line-height: 150px;
+  text-align: center;
+}
+
+.advert_card{
+  width: 100%;
+  /* height: 138px; */
+  margin-bottom: 20px;
+  padding: 16px;
+  box-sizing: border-box;
+  border-radius: 6px;
+  box-shadow: 0 4px 6px #e2e1e1;
+  display: flex;
+  align-items:center;
+  flex-direction: column;
+  /* justify-content: space-around; */
+}
+.broker_info{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.broker_info_left image{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.broker_info_center{
+  margin: 0 10px;
+  width: 166px;
+}
+.broker_info_centerv1{
+  display: flex;
+  margin-bottom: 4px;
+}
+.broker_info_centerv1_name{
+  font-size: 16px;
+  line-height: 22px;
+  color: #4c4c4c;
+}
+.broker_info_centerv1 .iconfont{
+  font-size: 20px;
+  color: #f8a501;
+  line-height: 22px;
+  margin: 0 8px;
+}
+.score{
+  font-size: 14px;
+  color: #f8a501;
+  line-height: 22px;
+}
+.broker_info_skill{
+  display: flex;
+  margin-bottom: 4px;
+}
+.skill_title{
+  padding: 0 6px;
+  line-height: 14px;
+  font-size: 12px;
+  color: #f9cf87;
+  border: 2px solid #fce6b7;
+  border-radius: 20px;
+  margin: 0 4px 4px 0;
+  text-align: center;
+}
+.broker_info_intro{
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 12px;
+  color: #959595;
+}
+.broker_info_right{
+
+}
+.broker_info_right_price{
+  font-size: 14px;
+  color: #f59500;
+}
+.broker_info_right_price text{
+  font-size: 22px;
+}
+.price_title{
+  color: #909090;
+  font-size: 12px;
+  line-height: 20px;
+}
+.advert_btnbox{
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+.advert_btn{
+  padding: 0 12px;
+  margin: 10px 0 0 10px;
+  border: 1px solid #f99600;
+  color: #f99600;
+  font-size: 12px;
+  line-height: 26px;
+  border-radius: 15px;
+}
+.advert_btnbox .advert_btn2{
+  color: #b5b5b5;
+  border: 1px solid #b5b5b5;
+}

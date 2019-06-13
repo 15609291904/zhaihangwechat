@@ -1,0 +1,55 @@
+<!--pages/brokerdetail/brokerdetail.wxml-->
+<!-- <text>pages/brokerdetail/brokerdetail.wxml</text> -->
+<view class='body'>
+  <view class='brokerdetail_body'>
+    <view class='broker_info'>
+      <view class='broker_head'><image src='{{brokerdetail.avatar}}'></image></view>
+      <view class='broker_info_box'>
+        <view class='broker_info_1'>
+          <text class='broker_info_name'>{{brokerdetail.real_name}}</text>
+          <view class='iconfont icon-mingpian mingpian'></view>
+          <view class='broker_info_score'><text>{{brokerdetail.score}}</text>分</view>
+        </view>
+        <view class='bio'>{{brokerdetail.bio}}</view>
+      </view>
+      <view class='broker_info_price'>
+        <view class='broker_price'>￥<text class='price_num'>{{brokerdetail.consult_amount|Int}}</text></view>
+        <view class='broker_price_title'>定金（元）</view>
+      </view>
+    </view>
+    <view wx:if="{{brokerdetail.bio!=''}}">
+      <view class="createTitle">个人签名</view>
+      <view class='messcard messcard_bio'>{{brokerdetail.bio}}</view>
+    </view>
+    <view class='history'>
+      <view class='history_title'>历史完成</view>
+      <view class='more'>更多>></view>
+    </view>
+    <view class='messcard messcard2' wx:for="{{brokerdetail.claims}}">
+      <view class='perloan'>
+        <view class='perloan_left'>{{item.claim_type[0]}}</view>
+        <view class='perloan_right'>
+          <view class='perloan_right_title'>{{item.claim_type[1]}}</view>
+          <view class='borrow_cycle'>
+            <text>借款周期:</text>
+            <text>{{item.loan_expire}}年</text>
+          </view>
+        </view>
+      </view>
+      <view class='loan_total'>
+          <view class='loan_total_view'>
+            <view>{{item.amount|Int}}</view>
+            <text>本金（元）</text>
+          </view>
+          <view class='loan_total_view loan_total_view2'>
+            <view>{{item.interest|Int}}</view>
+            <text>利息（元）</text>
+          </view>
+          <view class='buttonbox'>
+            <button>接单</button>
+          </view>
+      </view>
+    </view>
+  </view>
+  <view class='bottomsend'>咨询</view>
+</view>

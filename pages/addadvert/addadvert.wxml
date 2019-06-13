@@ -1,0 +1,28 @@
+<!--pages/addadvert/addadvert.wxml-->
+<!-- <text>pages/addadvert/addadvert.wxml</text> -->
+<view class='addadvert_body'>
+  <view class='messcard'>
+    <view class='messcard_top'>
+      <view class='line'></view>
+      <text>定金要求 :</text>
+    </view>
+    <input type='digit' bindblur="priceblur" class='priceinput' value="{{advinfo.consult_amount}}" placeholder="￥-" auto-focus />
+  </view>
+  <view class='messcard'>
+    <view class='messcard_top'>
+      <view class='line'></view>
+      <text>服务标签 :</text>
+    </view>
+    <view class='messcard_bot'>
+      <text class="messcard_bot_title {{ form.labels[0]==item.id?'active_title':''}}" data-id='{{item.id}}' bindtap='selecttitle' wx:for="{{labelList}}" wx:key="{{index}}">{{item.name}}</text>
+    </view>
+  </view>
+  <view class='messcard'>
+    <view class='messcard_top'>
+      <view class='line'></view>
+      <text>广告词 :</text>
+    </view>
+    <textarea bindblur="bindTextAreaBlur"  value="{{advinfo.bio}}" auto-height placeholder="可添加擅长的债券种类等服务信息（选填）" />
+  </view>
+  <button class='addadvert_btn' bindtap='addadvert_btn' style="background:{{bgstyle}};color:{{colorstyle}}">发布</button>
+</view>

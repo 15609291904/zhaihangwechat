@@ -1,0 +1,45 @@
+<!--pages/aboutus/aboutus.wxml-->
+<!-- <text>pages/aboutus/aboutus.wxml</text> -->
+<view class='aboutus_body'>
+  <view class='about_logo'>
+    <image class='logo' src='../../images/newLogo.png'></image>
+    <text>债行网 V 1.1.0</text>
+  </view>
+  <view class='aboutus_list'>
+    <view class='aboutus_list_li'>
+      <text class='aboutus_list_li_left'>去评分</text>
+      <view class='aboutus_list_li_right'>
+        <text></text>
+        <view class='iconfont icon-arrow-right-copy-copy'></view>
+      </view>
+    </view>
+    <view class='aboutus_list_li' bindtap="toskillsintro">
+      <text class='aboutus_list_li_left'>功能介绍</text>
+      <view class='aboutus_list_li_right'>
+        <text></text>
+        <view class='iconfont icon-arrow-right-copy-copy'></view>
+      </view>
+    </view>
+    <view class='aboutus_list_li'>
+      <text class='aboutus_list_li_left'>意见反馈</text>
+      <view class='aboutus_list_li_right'>
+        <text></text>
+        <view class='iconfont icon-arrow-right-copy-copy'></view>
+      </view>
+    </view>
+    <view class='aboutus_list_li'>
+      <text class='aboutus_list_li_left'>版本更新</text>
+      <view class='aboutus_list_li_right'>
+        <text>最新版本</text>
+        <view class='iconfont icon-arrow-right-copy-copy'></view>
+      </view>
+    </view>
+    <view class='aboutus_list_li' bindtap="tocontactus">
+      <text class='aboutus_list_li_left'>联系我们</text>
+      <view class='aboutus_list_li_right'>
+        <text></text>
+        <view class='iconfont icon-arrow-right-copy-copy'></view>
+      </view>
+    </view>
+  </view>
+</view>
