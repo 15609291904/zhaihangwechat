@@ -1,0 +1,69 @@
+/* pages/claimbind/claimbind.wxss */
+.claimbind_body{
+  padding: 0 12px;
+}
+.messcard{
+  border-radius: 6px;
+  box-shadow: 0 4px 6px #e2e1e1;
+  padding: 16px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+.messcard_title{
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.line{
+  width: 8px;
+  height: 2px;
+  background: #f6a702;
+  margin-right: 6px;
+}
+.card_title{
+  font-size: 16px;
+  color: #000;
+  font-weight: 600;
+}
+.selectbox{
+  display: flex;
+}
+.selectbox view{
+  padding: 0 12px;
+  margin: 0 10px 12px 0;
+  background: #f8f8f8;
+  color: #d0d0d0;
+  font-size: 12px;
+  height: 25px;
+  text-align: center;
+  line-height: 24px;
+  border-radius: 20px;
+}
+.selectbox .selectactive{
+  color: #fff;
+  background: #f6a702;
+}
+.messcard_phone{
+  padding: 0 20px;
+  border-radius: 20px;
+  background: #f8f8f8;
+  font-size: 14px;
+  border: 0;
+  outline: none;
+  color: #f6a702;
+  height: 32px;
+  width: 96px;
+}
+.bind{
+  background: #f6a702;
+  color: #fff;
+  width: 200px;
+  height: 35px;
+  margin: 40px auto 70px;
+  border-radius: 20px;
+  text-align: center;
+  line-height: 34px;
+  border: 0;
+  outline: none;
+  font-size: 14px;
+}

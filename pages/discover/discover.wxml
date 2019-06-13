@@ -1,0 +1,15 @@
+<view class='discover_box'>
+  <view class='discover_list' bind:tap="todiscoverDetail" wx:for="{{articlelist}}" wx:key="{{index}}" data-discoverid="{{item.id}}">
+    <view class='discover_list_left'>
+      <text class='discover_list_title'>{{item.title}}</text>
+      <text class='discover_list_con'>{{item.introduce}}</text>
+      <view class='discover_list_time'>
+        <image src='../../images/discover-list-left-time.png'></image>
+        <text>2019-04-15 22:03</text>
+      </view>
+    </view>
+    <view class='discover_list_right'>
+      <image src='{{item.img}}'></image>
+    </view>
+  </view>
+</view>

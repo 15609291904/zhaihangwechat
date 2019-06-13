@@ -1,0 +1,80 @@
+<!--pages/orderdetail/orderdetail.wxml-->
+<!-- <text>pages/orderdetail/orderdetail.wxml</text> -->
+<view class='orderdetail_body'>
+  <view class='orderdetail_title'>已选经纪人</view>
+  <view class='messcard' wx:if="{{orderdetail.is_invite==1}}" wx:for="{{orderdetail.invited}}" wx:key="{{index}}">
+    <view class='messcard_left'>
+      <image class='messcard_img' src='{{item.avatar}}'></image>
+    </view>
+    <view class='messcard_center'>
+      <view class='messcard_center1'>
+        <view class='broker_name'>{{item.real_name}}</view>
+        <view class='iconfont icon-mingpian mingpian'></view>
+        <text class='score'>{{item.score}}分</text>
+      </view>
+      <view class='bio'>{{item.bio}}</view>
+    </view>
+    <view class='messcard_right'>
+      <view class='messcard_right_money'>￥<text class='money_num'>{{item.consult_amount}}</text></view>
+      <view class='messcard_right_title'>定金（元）</view>
+    </view>
+  </view>
+  <!-- <view class='messcard' wx:else-if="{{orderdetail.is_order}}">
+    <view class='messcard_left'>
+      <image class='messcard_img' src='{{orderdetail.claim.avatar}}'></image>
+    </view>
+    <view class='messcard_center'>
+      <view class='messcard_center1'>
+        <view class='broker_name'>{{orderdetail.claim.real_name}}</view>
+        <view class='iconfont icon-mingpian mingpian'></view>
+        <text class='score'>{{orderdetail.claim.score}}分</text>
+      </view>
+      <view class='bio'>{{orderdetail.claim.bio}}</view>
+    </view>
+    <view class='messcard_right'>
+      <view class='messcard_right_money'>￥<text class='money_num'>{{orderdetail.claim.consult_amount}}</text></view>
+      <view class='messcard_right_title'>定金（元）</view>
+    </view>
+  </view> -->
+  <view class='orderdetail_title'>债权详情</view>
+  <view class='messcard messcard2'>
+    <view class='casedetail_info_price1'>
+      <view>{{orderdetail.amount|Int}}</view>
+      <text>本金（元）</text>
+    </view>
+    <view class='casedetail_line'></view>
+    <view class='casedetail_info_price2'>
+      <view>{{orderdetail.interest|Int}}</view>
+      <text>利息（元）</text>
+    </view>
+    <view class='casedetail_line'></view>
+    <view class='casedetail_info_price3'>
+      <view class='casedetail_info_time'>{{orderdetail.loan_expire|Int}}<text>年</text></view>
+      <text>借款周期</text>
+    </view>
+  </view>
+  <view class="loanDetialList">
+    <view class="loanDetialListLeft">
+      <text>债权人</text> 
+      <text>债权人联系方式</text> 
+      <text>债务人</text> 
+      <text>债务人联系方式</text> 
+      <text>债权种类</text> 
+      <text>期望还款需求</text> 
+      <text>债权发生地</text> 
+      <text>发布日期</text> 
+      <text>债权编号</text>
+    </view> 
+    <view class="loanDetialListRight">
+      <text>{{ orderdetail.claim_man || '--' }}</text> 
+      <text>{{ orderdetail.claim_mobile || '--' }}</text> 
+      <text>{{ orderdetail.debt_man || '--' }}</text> 
+      <text>{{ orderdetail.debt_mobile || '--' }}</text> 
+      <text>{{ orderdetail.claim_type || '--' }}/{{ orderdetail.claim_type || '--' }}</text> 
+      <text>{{ orderdetail.appeal_type || '--' }}</text> 
+      <text>{{ orderdetail.city_name || '--' }}</text> 
+      <text>{{ createtime || '--' }}</text> 
+      <text>{{ orderdetail.type || '--' }}-{{ orderdetail.id || '--' }}</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,164 @@
+/* pages/login/login.wxss */
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1558494531468'); /* IE9 */
+  src: url('iconfont.eot?t=1558494531468#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAQMAAsAAAAACIgAAAPAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDMgqEJINdATYCJAMUCwwABCAFhG0HShtrB8gOJTWhwGDgIQFgPHztx/7c3X0PlSRJNOHNqyUSzRLJozUSTCcxZDKNkgkFvlgofxg+T/+lGYTsC9XxAyyOK/KSZUUadYROH+Cp+BBvw8Ex42UA5q1tLpFlmZo2wPGAZrOI9O3LHvhf5AX9h7GbCBriZQLNhqyBbOw6oAAeCjArEMcUqQUeGYfSUB0ahbpiYxEPoNKY7kT3cc9/P36aCQ+SKgNX7RztxMGWD/mHaTR3IddezgM30/lgbCNjGlCIk8rAMTRKTUM1e8NdrACaNUrSVP12f9B/mF5YINEcyNQM/+GRFSERNVDZClaUdOFDjsVkPnYrqox62SZk47SclvBcG2lGIx4BnwCQhz2ahCy1tg4sCkb8hrnztnLHJptNEehw6JxONdWpUp9jt3NkR97F8iU4MVx+PjcS4q25FyqWk3Co4lJeVEb7xWXNjn0OR9jw9SW5NoXN5uX1PBkRfY3S/l7pfKt2OhQI3jgYFqZq7pk4EaokW06MdYZkOCoVtnylvUrtdOY58KbckJDG8jCVggiENeeFq1UC4S0VoUq1LrRuseJBNIevSiFWDeAyazOSegANFBrWLsFFRWUIRHDqwEWJlCygSorB5pVM+nsNWNMh4zZZvN7xn0xW+KZgw+2Iu8vZkaxwZkuEflvQwUCxSLnpWPSuKH2gl8v+Xze3eBXR/jeWVua4p4P4/yv+udYhPWWDSOLeu28+lVy99TD8ifZFz9CGlbPaSfdvFp6+dDW1InpTV6siiu/ec/DMQ3kI0kmGkvNkGJkBiq2h1p/WMGvcsmI4SAXw9SQPi/5w5s9chwawcvL9nEcoyF8Egpc9+vuJ/hv+e3gX8O71Yl1SdTP4hUadlf+6pgC+FkqYauCsituIFW5lZQHKu1L+1ro/HOn2YhpTX+dKQqO+BJIGg5A1GkYUzDRUWsxBrdEyNJuye3uLHixUlCZMKpIgdJqBpN0bZJ0eIArmOVT6fYdaZ6DQbDeCD2wxGpTXdhZqeYhjujSM0tNmArl5L1F9DJKCUcum1ZyhgixHRTGZWJrP7oZmyE6xhLOScp4nMIKlTdgu6TpoNNKYhaWToZ4XJ/G8ZZ1EQlQ9SaynTcDLOhakxYNwGJ00GIoezYygnXlehZ8/BiIJjLTYhqaepArE4lC9Y2TEpB0Quw3mTk23MpxjRZLj8Qh1GoFFM8Hskn2QEaZoGEv1uGSQHk8saUDCYh2J0o7oahAvbzK94y5oBg6uIkWOElXU0iXtRgpas47ySKNl6UnQTLpn/TIAAA==') format('woff2'),
+  url('iconfont.woff?t=1558494531468') format('woff'),
+  url('iconfont.ttf?t=1558494531468') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('iconfont.svg?t=1558494531468#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-wo:before {
+  content: "\e663";
+}
+
+.icon-guanbi:before {
+  content: "\e6ae";
+}
+
+.icon-yanzheng:before {
+  content: "\e632";
+}
+
+.icon-guanbi1:before {
+  content: "\e647";
+}
+
+
+
+.login_body{
+  position:relative;
+}
+.login_header{
+  position: relative;
+}
+.login_header .login_haeder_bg{
+  width: 100%;
+  height: 145px;
+  position: absolute;
+}
+.login_header_logo{
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  left: 0;
+  top: 119px;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+.login_close{
+  position: absolute;
+  font-size: 26px;
+  color: #fff;
+  left: 10px;
+  top: 10px;
+}
+.login_card{
+  width: 100%;
+  height: 327px;
+  position: absolute;
+  top: 110px;
+  padding: 0 18px;
+  box-sizing: border-box;
+}
+.login_box{
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,1);
+  box-shadow: 4px 6.928px 32px 0px rgba(186,186,186,0.5);
+  border-radius: 5px;
+  padding:0 12px;
+  box-sizing: border-box;
+}
+.login_box_title{
+  text-align: center;
+  font-size: 20px;
+  color: #F6A802;
+  padding-top:23px;
+  margin-bottom: 42px;
+}
+.mobile_box{
+  display: flex;
+  width: 100%;
+  height: 40px;
+  /* border: 1px solid #F6A802; */
+  border-radius: 21.5px;
+  box-sizing: border-box;
+  margin: 20px 0;
+  background: #F8F8F8;
+}
+.icon-wo{
+  color: #E3E3E3;
+  font-size: 20px;
+  line-height: 40px;
+  padding: 0 5px 0 10px;
+}
+.mobile_input{
+  margin: 6px 0 0 10px;
+  color: #F6A802;
+  font-size: 14px;
+}
+.yanzhengma_box{
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+.yanzhengma_input_box{
+  display: flex;
+  height: 40px;
+  width: 196px;
+  background: #F8F8F8;
+  border-radius: 21.5px;
+}
+.icon-yanzheng{
+  font-size: 20px;
+  line-height: 40px;
+  padding: 0 5px 0 10px;
+  color: #E3E3E3;
+}
+.getyanzhengma{
+  width: 102px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 15px;
+  color: #fff;
+  background: rgba(246,168,2,1);
+  box-shadow: 2.5px 4.33px 10px 0px rgba(227,130,4,0.5);
+  text-align: center;
+  border-radius: 21.5px;
+}
+.login_btn{
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  background: rgba(227,227,227,1);
+  /* box-shadow: 1.5px 2.598px 8px 0px rgba(210,210,210,0.5); */
+  font-size: 15px;
+  text-align: center;
+  border-radius: 21.5px;
+  margin: 10px 0 0 0;
+  border: 0;
+  color: rgba(43,43,43,0.5);
+  outline: none;
+}
+.login_box .activeview{
+  border: 1px solid #F6A802; 
+}
+.reg_agreement{
+  font-size: 14px;
+  margin-top: 10px;
+  color: #F6A802;
+}
+.gray{
+  background: rgba(227,227,227,1);
+  box-shadow: 2.5px 4.33px 10px 0px rgba(227,227,227,0.5);
+}

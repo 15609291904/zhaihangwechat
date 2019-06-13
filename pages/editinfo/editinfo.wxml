@@ -1,0 +1,44 @@
+<!--pages/editinfo/editinfo.wxml-->
+<!-- <text>pages/editinfo/editinfo.wxml</text> -->
+<view class='editinfo_body'>
+  <view class='editinfo_head'>
+    <image class='headerbg' src='../../images/headbg.png'></image>
+    <view class='headerinfo'>
+      <view class='headerinfo_top'>
+        <image src='{{userinfo.avatar}}'></image>
+        <text>{{userinfo.nickname}}</text>
+      </view>
+      <view class='yinsi'>个人隐私信息安全保障中</view>
+    </view>
+  </view>
+  <view class='editinfo_list'>
+    <view class='editinfo_list_li'>
+      <text class='editinfo_list_li_title'>头像</text>
+      <view class='editinfo_list_li_right' bindtap='getheadimg'>
+        <image src='{{userinfo.avatar}}'></image>
+        <view class='iconfont icon-arrow-right-copy-copy'></view>
+      </view>
+    </view>
+    <view class='editinfo_list_li'>
+      <text class='editinfo_list_li_title'>昵称</text>
+      <view class='editinfo_list_li_right' bindtap='editnickname'>
+        <text>{{userinfo.nickname}}</text>
+        <view class='iconfont icon-arrow-right-copy-copy'></view>
+      </view>
+    </view>
+    <view class='editinfo_list_li'>
+      <text class='editinfo_list_li_title'>性别</text>
+      <view class='editinfo_list_li_right' bindtap='setsex'>
+        <text>{{userinfo.gender===1?'男':'女'}}</text>
+        <view class='iconfont icon-arrow-right-copy-copy'></view>
+      </view>
+    </view>
+    <view class='editinfo_list_li'>
+      <text class='editinfo_list_li_title'>个人签名</text>
+      <view class='editinfo_list_li_right' bindtap='setbio'>
+        <text class='bio'>{{userinfo.bio}}</text>
+        <view class='iconfont icon-arrow-right-copy-copy'></view>
+      </view>
+    </view>
+  </view>
+</view>

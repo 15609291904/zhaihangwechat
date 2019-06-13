@@ -1,0 +1,63 @@
+<!--pages/skillintro/skillintro.wxml-->
+<!-- <text>pages/skillintro/skillintro.wxml</text> -->
+<view >
+  <text class='skill_title'>功能介绍</text>
+  <view class='intro_box'>
+    <view class='intro_title_box'>
+      <view class='intro_title' bindtap='showorhidelogin'>登录/注册</view>
+      <view class="intro_con {{showlogin==false?'hide':'show'}}">
+        打开债行-进入【我的】-点击【点击登录】-进入登录页面-输入手机号码-点击【获取验证码】
+      </view>
+    </view> 
+    <view class='intro_title_box'>
+      <view class='intro_title' bindtap='showorhideclaim'>发布债事</view>
+      <view class="intro_con {{showclaim==false?'hide':'show'}}">
+        打开债行-进入【首页】-点击【债事登记】-进入【债事登记】页面
+      </view>
+    </view>  
+    <view class='intro_title_box'>
+      <view class='intro_title' bindtap='showorhidefind'>查看经纪人</view>
+      <view class="intro_con {{showfind==false?'hide':'show'}}">
+        打开债行-进入【首页】-点击【找经纪人】-进入【找经纪人】页面
+      </view>
+    </view> 
+    <view class='intro_title_box'>
+      <view class='intro_title' bindtap='showorhidecase'>查看案例</view>
+      <view class="intro_con {{showcase==false?'hide':'show'}}">
+        打开债行-进入【首页】-点击【找经纪人】-进入【找经纪人】页面
+      </view>
+    </view> 
+    <view class='intro_title_box'>
+      <view class='intro_title' bindtap='showorhidenews'>查看新闻</view>
+      <view class="intro_con {{shownews==false?'hide':'show'}}">
+        打开债行-进入【发现】-点击列表-进入新闻详情页面
+      </view>
+    </view> 
+    <view class='intro_title_box'>
+      <view class='intro_title' bindtap='showorhidereal'>实名认证</view>
+      <view class="intro_con {{showreal==false?'hide':'show'}}">
+        打开债行-进入【我的】-点击【实名认证】-进入认证页面
+      </view>
+    </view> 
+    <view class='intro_title_box'>
+      <view class='intro_title' bindtap='showorhidebroker'>经纪人认证</view>
+      <view class="intro_con {{showbroker==false?'hide':'show'}}">
+        打开债行-进入【我的】-点击【申请经纪人】-进入经纪人认证页面
+      </view>
+    </view> 
+    <view class='intro_title_box'>
+      <view class='intro_title' bindtap='showorhideclaims'>查看债事</view>
+      <view class="intro_con {{showclaims==false?'hide':'show'}}">
+        打开债行-进入【我的】-点击【我的债事】-进入债权/债务
+      </view>
+    </view> 
+    <view class='intro_title_box'>
+      <view class='intro_title lastlist ' bindtap='showorhideorder'>经纪人接单</view>
+      <view class="intro_con {{showorder==false?'hide':'show'}}">
+        打开债行-进入【我的】-点击【我的接单】-进入已接单/待处理-点击【接单】
+      </view>
+    </view> 
+  </view>
+  <!-- <text class='skill_title'>关于债事</text>
+  <text class='skill_title'>关于入驻</text> -->
+</view>

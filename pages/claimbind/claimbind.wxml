@@ -1,0 +1,23 @@
+<!--pages/claimbind/claimbind.wxml-->
+<!-- <text>pages/claimbind/claimbind.wxml</text> -->
+<view class='claimbind_body'>
+  <view class='messcard'>
+    <view class='messcard_title'>
+      <view class='line'></view>
+      <text class='card_title'>选择身份 :</text>
+    </view>
+    <view class='selectbox'>
+      <view wx:for="{{typeList}}" class="{{form.type==item.id?'selectactive':''}}" bindtap='bindtype' wx:key="{{index}}" data-type="{{item.id}}">{{item.name}}</view>
+      <!-- <view class="{{form.type==1?'selectactive':''}}" catchtap='bindtype'  data-type="1">债权人</view>
+      <view class="{{form.type==2?'selectactive':''}}" catchtap='bindtype'  data-type="2">债务人</view> -->
+    </view>
+  </view>
+  <view class='messcard'>
+    <view class='messcard_title'>
+      <view class='line'></view>
+      <text class='card_title'>手机号 :</text>
+    </view>
+    <input placeholder='182 xxxx xxxx' class='messcard_phone' bindblur='phoneblur' value="{{form.mobile}}"></input>
+  </view>
+  <button class='bind' bindtap='bindclaim'>绑定</button>
+</view>

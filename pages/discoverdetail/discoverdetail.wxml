@@ -1,0 +1,12 @@
+<!--pages/discoverdetail/discoverdetail.wxml-->
+<!-- <text>pages/discoverdetail/discoverdetail.wxml</text> -->
+<view class='discover_detail'>
+  <text class='discover_detail_title'>{{articaldetail.title}}</text>
+  <view class='discover_detail_time'>
+    <image src='../../images/discover-list-left-time.png'></image>
+    <text>{{articaldetail.add_time}}</text>
+  </view>
+  <view class='discover_detail_container'>
+    <rich-text class='rich_text' nodes="{{articaldetail.content}}"></rich-text>
+  </view>
+</view>

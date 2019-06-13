@@ -1,0 +1,8 @@
+<!--pages/pay/pay.wxml-->
+<!-- <text>pages/pay/pay.wxml</text> -->
+<view class='pay_body'>
+  <view class='payimgbox'>
+    <image src='{{payimg}}'></image>
+  </view>
+  <view class='pay_title'>付款时，请务必复制订单号，填写到备注中</view>
+</view>

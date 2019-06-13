@@ -1,0 +1,123 @@
+/* pages/choosebroker/choosebroker.wxss */
+.select_broker{
+  position: relative;
+}
+.select_title{
+  color: #020202;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+.broker_messcard{
+  box-shadow: 0 4px 6px #e2e1e1;
+  border-radius: 6px;
+  padding: 16px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  display: flex;   
+  align-items: center;
+}
+.broker_head{
+  width: 20%;
+}
+.broker_head image{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.select_broker_btn{
+  width: 10%;
+}
+.broker_info{
+  /* margin-left: 10px; */
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+.broker_info_1{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 8px;
+}
+.broker_info_name{
+  font-size: 16px;
+  color: #2B2B2B;
+}
+.broker_info .mingpian{
+  margin: 0 8px;
+  font-size: 20px;
+  color: #f8a501;
+}
+.broker_info_score{
+  font-size: 15px;
+  color: #F6A802;
+}
+.broker_info_price{
+  text-align: center;
+  width: 30%;
+}
+.broker_price{
+  font-size: 18px;
+  color: #F6A802;
+}
+.broker_price .price_num{
+  font-size: 30px;
+}
+.broker_price_title{
+  font-size: 11px;
+  color: #2B2B2B;
+  opacity: .6;
+}
+.bio{
+  color: #959595;
+  font-size: 12px;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/* radio{
+  border-radius: 50%;
+  width: 32rpx;/* 最好是4的倍数，不然会不在中间 */
+  /* height: 32rpx;
+  border: 2rpx solid #F6A802;/* 设置边框（外圆） */
+  /* font-size: 0;/* 让边框重合 */
+/*} */ 
+/* radio .wx-radio-input{
+   border-radius: 50%;
+   width: 32rpx;
+   height: 32rpx; 
+   border: none;/* 替换边框（隐藏原有边框） */
+/*} */
+ /* radio .wx-radio-input.wx-radio-input-checked::before{
+   border-radius: 50%;
+   width: 20rpx; 
+   height: 20rpx; 
+   text-align: center;
+   font-size:0rpx; /* 对勾大小 去掉 */
+  /* background-color: #F6A802; 
+   transform:translate(-50%, -50%) scale(1);
+   -webkit-transform:translate(-50%, -50%) scale(1);
+}   */
+.nexttoagreement{
+  width: 100%;
+  height: 50px;
+  line-height: 48px;
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  background: #f7a803;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  position: fixed;
+  bottom: 0;
+}
+.select_broker_body{
+  padding: 0 12px;
+}
+.selectradio{
+  width: 20px;
+  height: 20px;
+}

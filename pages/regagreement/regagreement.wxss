@@ -1,0 +1,18 @@
+/* pages/regagreement/regagreement.wxss */
+.regagreement_body{
+    font-size: 15px;
+    padding: 0 12px 12px;
+}
+.regagreement_body .reg_agree_title{
+    font-size: 30px;
+    text-align: center;
+    margin: 20px;
+    font-weight: 600;
+}
+.regagreement_body text{
+    text-indent: 2em;
+    display: block;
+}
+.regagreement_body .blod_font{
+    font-weight: 800;
+}

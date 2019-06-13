@@ -1,0 +1,8 @@
+<!--pages/editnickname/editnickname.wxml-->
+<!-- <text>pages/editnickname/editnickname.wxml</text> -->
+<view class='editnickname_body'>
+  <view class='editnickname_card'>
+     <textarea class='textarea' auto-height='' value="{{userinfo.nickname}}" bindinput='edit'/>
+  </view>
+  <view class='setnickname' bindtap='setnickname'>完成</view>
+</view>

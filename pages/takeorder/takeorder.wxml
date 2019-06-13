@@ -1,0 +1,37 @@
+<!--pages/takeorder/takeorder.wxml-->
+<!-- <text>pages/takeorder/takeorder.wxml</text> -->
+<view class='takeorder_body'>
+  <view class='header'>
+    <view class='myclaims_head active_head'>待处理</view>
+    <view class='myclaims_head' bindtap='toyijd'>已接单</view>
+    <view class='myclaims_head'></view>
+  </view>
+  <!-- <view v-if="lists.total === 0" class="is-last no-data">---- 没有符合条件的订单 ----</view> -->
+  <view class='content'>
+    <view class='takeorder_card' wx:for="{{takeorderlist}}" wx:key="{{index}}" >
+      <view bindtap='todetail' data-id="{{item.id}}">
+        <view class='perloan'>
+          <view class='perloan_left'>{{item.claim_type[0]}} {{item.claim_num}}</view>
+          <view class='perloan_right'>{{item.claim_type[1]}}</view>
+        </view>
+        <view class='loan_total'>
+          <view class='loan_total_view'>
+            <view>{{item.amount|Int}}</view>
+            <text>本金（元）</text>
+          </view>
+          <view class='loan_total_view loan_total_view2'>
+            <view>{{item.interest|Int}}</view>
+            <text>利息（元）</text>
+          </view>
+          <view class='loan_total_view loan_total_view2'>
+            <view class='loan_total_view2_tit'>{{item.loan_expire}}<text class='nian'>年</text></view>
+            <text>借款周期</text>
+          </view>
+        </view>
+      </view>
+      <view class='button_box'>
+        <button bindtap='takeorder' data-id="{{item.id}}" data-type="{{item.type}}">接单</button>
+      </view>
+    </view>
+  </view>
+</view>

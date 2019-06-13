@@ -1,0 +1,33 @@
+/* pages/editownbio/editownbio.wxss */
+.editownbio_body{
+  padding: 12px;
+}
+.editownbio_card{
+  width: 100%;
+  background: #fff;
+  padding: 12px;
+  border-radius: 6px;
+  height: calc(100% - 64px);
+  box-shadow: 0 4px 6px #e2e1e1;
+  box-sizing: border-box;
+}
+.textarea{
+  width: 100%;
+  border-radius: 6px;
+  background: #f8f8f8;
+  padding: 12px 20px;
+  color: #7a7a7a;
+  box-sizing: border-box;
+  font-size: 12px;
+}
+.setbio{
+  width: 347px;
+  height: 40px;
+  background: #f6a702;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  line-height: 40px;
+  margin: 20px auto 0;
+  border-radius: 40px;
+}

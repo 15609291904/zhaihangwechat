@@ -1,0 +1,38 @@
+/* pages/skillintro/skillintro.wxss */
+.skill_title{
+  font-size: 14px;
+  color: #777777;
+  display:block;
+  padding: 10px 0 10px 12px;
+  background: #efeff3;
+}
+.intro_box{
+  padding-left: 12px;
+  border-top: 1px solid #c7c7cb;
+  border-bottom: 1px solid #c7c7cb;
+  display:block;
+}
+.intro_title{
+  padding: 12px 0;
+  border-bottom: 1px solid #c7c7cb;
+  display:block;
+  font-size: 15px;
+  font-weight: 600;
+  color: #000;
+}
+.intro_con{
+  font-size: 14px;
+  color: #484541;
+  padding: 20px 5px 35px 5px;
+  display:block;
+  border-bottom: 1px solid #c7c7cb;
+}
+.show{
+  display:block;
+}
+.hide{
+  display: none;
+}
+.intro_title_box .lastlist{
+  border-bottom: 0;
+}

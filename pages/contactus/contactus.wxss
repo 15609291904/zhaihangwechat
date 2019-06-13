@@ -1,0 +1,29 @@
+/* pages/contactus/contactus.wxss */
+.contact{
+    padding: 0 24px;
+}
+.contact image{
+  display: block;
+    width: 70px;
+    height: 70px;
+    margin: 0 auto;
+}
+.contact_box{
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    height: 46px;
+    border-bottom: 2px solid #fafafa;
+    line-height: 46px;
+}
+.contact_title{
+    font-weight: 600;
+}
+.title_contact{
+    font-size: 18px;
+    color: black;
+    line-height: 54px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    text-align: center;
+}

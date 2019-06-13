@@ -1,0 +1,157 @@
+/* pages/findbroker/findbroker.wxss */
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1558420230682'); /* IE9 */
+  src: url('iconfont.eot?t=1558420230682#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAANgAAsAAAAAB5QAAAMUAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDBgqCcIJUATYCJAMMCwgABCAFhG0HQhumBsgusG3YkxKliLKZApyt/wEctBAPT2v/O3dndr47SVwySbyp1wdNrNEIBUInFK0iOrmmKQ5QocpQIShCBaSKye/7eGk6hp8FZIeK0IOcmtwU5X+GRSeNQUfriqlMe/9zTb3YhKK/zeYS1drBR3vnSx7QwDqxQnwDGhBvmF44p+BB2k+g1SThVJu3FpUCZxkZFojjRxgTcE5Z5ZrC0CyUkrlZ3AG15uqq+hHgtv5+/BQbzlTqhIzddjDbCtK+9KGm8d+wVyJANt5hUCNhNiAT+0u9O2lsdDaNVl+rrc8sslCNFfiHlgb6stI/XkUUJL8dTIea6qRkXEDwtUQCaUiDC5pwBXATUPtLQmmf7O/iTc5qtA4qPgfXD5K6jvYaq8axa2tcHnZtvTYItFuReOupKl0+c+u6fmK92z49ve46eXBxcXh52Weqsjo52bbl1na9/H77y7UaX7eLuTFUVskISJck/H+2IuV/JnxMgxJ7PlYBKyrx1Vn+SmjBZUSH66nhYTqrVrCk/CoLAZunBt4Xst+fh6YzmtK/qmnjPd/Ps7HnXJFyEYsK4rhlsqqH6X2ByEiH8r7G+3z0teUNkGuyA3U+RmRgulTNAIB0R/3gF/3GZ/hz0uC1+qu5LYPnLsd6bM7a+Wm+AV/wQ2Qty3KgILaUPSmXRonkIv3t5mrVit9QDL3e+usHWucTmg3EUGkyAUmzyWimzoZam8VQNFsHrWbJXdymD6ERuQUzdQMI3Xag0ukhJN3u0Ux9hdqgTyi6QwOttkffmm2mBtu66SwyUWSF5nrIWiQRMwd1NYXFiHHwJpJUaHY5InY2AGMio7OJXCQiMsYEew0TSymGmEgCzAGHIZ6XoEwkG7LQyGpK5dSoKFx2p0iLJABXmxCICYVYQWb1IJaFRIRlc8o19/liCMOBZ0JqCH3hcghhx7YPxYgU3QLN1YqtCNdyjF0NRiyKwiCMkAigHOBGeBqVQHJ5LxvEgopU3SMsSxWFyHBbbeT8euH5tkArMjZFFSmyjjl1rIk32UQHkUoO5xNHREaOLQAA') format('woff2'),
+  url('iconfont.woff?t=1558420230682') format('woff'),
+  url('iconfont.ttf?t=1558420230682') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('iconfont.svg?t=1558420230682#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon--xialajiantou:before {
+  content: "\e616";
+}
+
+.icon-mingpian:before {
+  content: "\e753";
+}
+
+
+
+.findbroker_body{
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+.findbroker_header{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 29px;
+  justify-content: space-around;
+  font-size: 14px;
+  color: #2B2B2B;
+  /* opacity: 0.3; */
+  line-height: 29px;
+}
+.findbroker_header .activetext{
+  color: #f4af2b;
+  border-bottom: 2px solid #ef9d00;
+  box-sizing: border-box;
+  opacity: 1;
+}
+.findbroker_price{
+  display: flex;
+  flex-direction: row;
+}
+.price_body{
+  padding: 0 12px;
+}
+.priceBox{
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 4px 6px #959595;
+  padding-bottom: 20px;
+  border-radius: 6px;
+}
+.priceBoxUl text{
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  line-height: 35px;
+  color: #2B2B2B;
+}
+.sure{
+  width: 198px;
+  height: 36px;
+  line-height: 36px;
+  border-radius: 18px;
+  color: #fff;
+  text-align: center;
+  background: #F6A802;
+  box-shadow: 2.5px 4.33px 10px 0px rgba(227,130,4,0.5);
+  margin: 0 auto;
+}
+.findbroker{
+  padding: 12px;
+  background: #fff;
+}
+.findbroker_box{
+  height: 93px;
+  width: 100%;
+  background: rgba(255,255,255,1);
+  box-shadow: 1px 1.732px 10px 0px rgba(186,186,186,0.33);
+  border-radius: 5px;
+  margin-bottom: 12px;
+  padding: 16px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.broker_head{
+  width: 20%;
+}
+.broker_head image{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.broker_info{
+  /* margin-left: 10px; */
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+.broker_info_1{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 8px;
+}
+.broker_info_name{
+  font-size: 16px;
+  color: #2B2B2B;
+}
+.broker_info .mingpian{
+  margin: 0 8px;
+  font-size: 20px;
+  color: #f8a501;
+}
+.broker_info_score{
+  font-size: 15px;
+  color: #F6A802;
+}
+.broker_info_price{
+  text-align: center;
+  width: 30%;
+}
+.broker_price{
+  font-size: 18px;
+  color: #F6A802;
+}
+.broker_price .price_num{
+  font-size: 30px;
+}
+.broker_price_title{
+  font-size: 11px;
+  color: #2B2B2B;
+  opacity: .6;
+}
+.bio{
+  color: #959595;
+  font-size: 12px;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

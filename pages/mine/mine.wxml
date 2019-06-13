@@ -1,0 +1,135 @@
+<!--pages/mine/mine.wxml-->
+<view class='mine_body'>
+  <!-- <view bind:tap="tologin">点击登录</view> -->
+  <block wx:if="{{userinfo}}">
+    <view class='mine_login_header'>
+      <view class='mine_login_header_head'><image src='{{userinfo.avatar}}'></image></view>
+      <view class='mine_login_header_info'>
+        <view class='mine_login_header_info_left'>
+          <text class='mine_login_header_infophone'>{{userinfo.nickname}}</text>
+          <view class='mine_login_header_inforenz' wx:if="{{userinfo.group_id}}">
+            <image class='mine_login_header_inforenz_vip' src='../../images/vip.png'></image>
+            <text class='login_renz'>已认证</text>
+            <text class='login_city' wx:if="{{userinfo.group_id===2 && userinfo.city}}">{{userinfo.city.name}}</text>
+          </view>
+        </view>
+        <view class='mine_login_header_info_right' bindtap='toeditinfo'>
+          <text>编辑资料</text>
+          <view class='iconfont icon-arrow-right-copy-copy'></view>
+        </view>
+      </view>
+    </view>
+  </block>
+  <block wx:else>
+    <view class='mine_nologin_header'>
+      <view class='mine_nologin_header_left'>
+        <image src='../../images/head.jpg'></image>
+        <text class='tologin' bind:tap="tologin">点击登录</text>
+      </view>
+      <view class='mine_nologin_header_right'>
+        <text>编辑资料</text>
+        <view class='iconfont icon-arrow-right-copy-copy'></view>
+      </view>
+    </view>  
+  </block>
+  <view class='billCard'>
+    <view class='billCardli'>
+      <text class='billCardli_num'>{{userinfo.money?userinfo.money:'0.00'}}</text>
+      <text class='billCardli_title'>余额</text>
+    </view>
+    <view class='billCardli'>
+      <text class='billCardli_num'>{{userinfo.score?userinfo.score:'0'}}</text>
+      <text class='billCardli_title'>积分</text>
+    </view>
+    <view class='billCardli'>
+      <text class='billCardli_num'>0.00</text>
+      <text class='billCardli_title'>账单</text>
+    </view>
+  </view>
+  <view class='minelist'>
+    <view class='mine_li' bindtap='tomyclaims'>
+      <view class='mine_li_left'>
+        <view class='iconfont icon-zhifeiji mine_li_lefticon mine_claim'></view>
+        <text>我的债事</text>
+      </view>
+      <view class='mine_li_right'>
+        <view class='iconfont icon-arrow-right-copy-copy mine_li_righticon'></view>
+      </view>
+    </view>
+    <view class='mine_li' bindtap='claimabout'>
+      <view class='mine_li_left'>
+        <view class='iconfont icon-bijiben-copy mine_li_lefticon claim_about'></view>
+        <text>债事关联</text>
+      </view>
+      <view class='mine_li_right'>
+        <view class='iconfont icon-arrow-right-copy-copy mine_li_righticon'></view>
+      </view>
+    </view>
+    <view class='mine_li' wx:if="{{userinfo.group_id===2}}" bindtap='advermanager'>
+      <view class='mine_li_left'>
+        <view class='iconfont icon-zhifeiji mine_li_lefticon mine_claim'></view>
+        <text>广告管理</text>
+      </view>
+      <view class='mine_li_right'>
+        <view class='iconfont icon-arrow-right-copy-copy mine_li_righticon'></view>
+      </view>
+    </view>
+    <view class='mine_li' bindtap='totakeorder' wx:if="{{userinfo.group_id===2}}">
+      <view class='mine_li_left'>
+        <view class='iconfont icon-bijiben-copy mine_li_lefticon claim_about'></view>
+        <text>我的接单</text>
+      </view>
+      <view class='mine_li_right'>
+        <view class='iconfont icon-arrow-right-copy-copy mine_li_righticon'></view>
+      </view>
+    </view>
+    <view class='mine_li' wx:if="{{!userinfo || !userinfo.group_id}}" bindtap='realname'>
+      <view class='mine_li_left'>
+        <view class='iconfont icon-dui mine_li_lefticon claim_about'></view>
+        <text>实名认证</text>
+      </view>
+      <view class='mine_li_right'>
+        <view class='iconfont icon-arrow-right-copy-copy mine_li_righticon'></view>
+      </view>
+    </view>
+    <view class='mine_li' wx:else>
+      <view class='mine_li_left'>
+        <view class='iconfont icon-dui mine_li_lefticon claim_about'></view>
+        <text>实名认证</text>
+      </view>
+      <view class='mine_li_right'>
+        <text class='renzheng'>已认证</text>
+        <view class='iconfont icon-arrow-right-copy-copy mine_li_righticon'></view>
+      </view>
+    </view>
+    <view class='mine_li' wx:if="{{userinfo.group_id===2}}">
+      <view class='mine_li_left'>
+        <view class='iconfont icon-dui mine_li_lefticon broker_renz'></view>
+        <text>经纪人认证</text>
+      </view>
+      <view class='mine_li_right'>
+        <text class='renzheng'>已认证</text>
+        <view class='iconfont icon-arrow-right-copy-copy mine_li_righticon'></view>
+      </view>
+    </view>
+    <view class='mine_li' bindtap='toaboutus'>
+      <view class='mine_li_left'>
+        <view class='iconfont icon-guanyuwomen mine_li_lefticon about_us'></view>
+        <text>关于我们</text>
+      </view>
+      <view class='mine_li_right'>
+        <view class='iconfont icon-arrow-right-copy-copy mine_li_righticon'></view>
+      </view>
+    </view>
+    <view class='mine_li' wx:if="{{userinfo.group_id === 1}}" bindtap='tobebroker'>
+      <view class='mine_li_left'>
+        <view class='iconfont icon-faxian mine_li_lefticon request_broker'></view>
+        <text>申请成为经纪人</text>
+      </view>
+      <view class='mine_li_right'>
+        <view class='iconfont icon-arrow-right-copy-copy mine_li_righticon'></view>
+      </view>
+    </view>
+  </view>
+    <button wx:if='{{userinfo}}' class='logout' bindtap='logout'>退出登录</button>
+</view>

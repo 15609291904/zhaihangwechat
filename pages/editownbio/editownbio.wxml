@@ -1,0 +1,8 @@
+<!--pages/editownbio/editownbio.wxml-->
+<!-- <text>pages/editownbio/editownbio.wxml</text> -->
+<view class='editownbio_body'>
+  <view class='editownbio_card'>
+     <textarea class='textarea' auto-height='' value="{{userinfo.bio}}" bindinput='edit'/>
+  </view>
+  <view class='setbio' bindtap='setbio'>完成</view>
+</view>

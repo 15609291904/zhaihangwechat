@@ -1,0 +1,16 @@
+/* pages/pay/pay.wxss */
+.pay_body{
+  padding: 0 12px;
+}
+.payimgbox{
+  padding: 0 25px;
+}
+.payimgbox image{
+  width: 100%;
+  height: 480px;
+}
+.pay_title{
+  font-size: 14px;
+  text-align: center;
+  margin-top: 20px;
+}

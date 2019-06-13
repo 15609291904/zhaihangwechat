@@ -1,0 +1,155 @@
+/* pages/orderdetail/orderdetail.wxss */
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1559116294972'); /* IE9 */
+  src: url('iconfont.eot?t=1559116294972#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAMIAAsAAAAABzAAAAK8AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCCcAqCOIIsATYCJAMICwYABCAFhG0HMhtUBhHVk5FkXxbYzm7oEBrwU8gge/lcnawEOSFKfYdDN/i+EcSTf1W91vT2X/nIDBSjyxiJGeR0NjerrlERiiU5D/6X70i6GSG/WgZQcVFfZAUuCoCcyqDIikz7i2PqUjwfaC4ZSUm7efOABtaJFeIb0MB4w9hNlAexHwIEClMRady0dWc8BjBMABk9YtgAfMqOwWghj+BK5hpkPRavVqjbKNbx78sXJvGgsBqQ0X5ok8HU/wBG6Plxe1MEjPEOA7CABioCBqRzqb4tOvRXRBMcv6E4rCtV4IN4nNJX+8cDAXGA5EQACor0c2Jg5qn+UgFgAAdMBWb3igRXMi8hFaycpeZfCEEWbA1h5WZIDCnkrZdEL7gcpay6OHhbe/eeDCU3Hz689ejR7NIrj+/ePf9MFK3qeqqH3ffBg7pI528pq2Qb6YNqqLFPb5y3spQb6vLsUFu6YmkbcldKtPKrHMpvvOcXjPj/jr0NY/qnijXcy7tHcMV1Na7WolLLSli22x6SV05E5HVwryz1yXbT3HOBycv1qzNQH+DU69Xpf/Abzp/+U7+U2v98ZAB4VC8nSw3tjODP1CDwxhktS4zLAgplbEZpWDEVdydZgQDEZXM6z/uKs24vLHiybtIYo1AMGk9JpMFWBEtEZXB46kGgAs0WR2QwEY2YBKA8SwQQUjkHimQugyaVO0iDfQaWbL6BI1U0BLpKxpoRXGkZoRsxGkEP9g/J7Rshlegg9YbhXQ0nWRz3Qr6SC8ZuyIZW3JDHmHB9wiRCQLw3WITDsNYdDt4zOumiyDH3PZXdqXN7U5pGjEbQA/YPJLdvRJuLzn3+huFdDdcUdchfyFdqHxjpGFogV/7Wquhajrk+YUKEAOK9AYugxQr9O3CU98ropCP28B4zvVSO2vK7+YXt6bYAASBRArtr/Ji0hSOZTSk=') format('woff2'),
+  url('iconfont.woff?t=1559116294972') format('woff'),
+  url('iconfont.ttf?t=1559116294972') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('iconfont.svg?t=1559116294972#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-mingpian:before {
+  content: "\e753";
+}
+
+
+.orderdetail_body{
+  padding: 0 12px;
+}
+.orderdetail_title{
+  padding: 0 10px;
+  border-left: 2px solid #faa600;
+  color: #faa600;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 13px;
+  margin-bottom: 10px;
+}
+.messcard{
+  box-shadow: 0 4px 6px #e2e1e1;
+  padding: 16px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+}
+.messcard_left{
+  width: 20%;
+}
+.messcard_img{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.messcard_center{
+  width: 60%;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+.messcard_right{
+  width: 20%;
+}
+.messcard_center1{
+  display: flex;
+  margin-bottom: 8px;
+}
+.broker_name{
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+  line-height: 22px;
+}
+.mingpian{
+  font-size: 20px;
+  color: #f8a501;
+  margin: 0 8px;
+  line-height: 22px;
+}
+.score{
+  font-size: 14px;
+  color: #f8a501;
+}
+.bio{
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 12px;
+  color: #959595;
+}
+.messcard_right_money{
+  font-size: 14px;
+  color: #f59500;
+}
+.messcard_right .money_num{
+  font-size: 22px;
+}
+.messcard_right_title{
+  font-size: 12px;
+  color: #909090;
+  line-height: 20px;
+}
+.messcard2{
+  justify-content: space-between;
+}
+.casedetail_info_price1{
+  text-align: center;
+}
+.casedetail_info_price1 view{
+  font-size: 25px;
+  color: #F6A802;
+}
+.casedetail_info_price1 text,.casedetail_info_price2 text,.casedetail_info_price3 text{
+  font-size: 12px;
+  color: #2B2B2B;
+  /* font-weight: 600; */
+}
+.casedetail_line{
+  width: 1px;
+  height: 25px;
+  background: #979797;
+  opacity: .1;
+  margin-top: 16px;
+}
+.casedetail_info_price2 view{
+  font-size: 30px;
+  color: #F6A802;
+  line-height: 33px;
+}
+.casedetail_info_time{
+  font-size: 30px;
+  color: #F6A802;
+  line-height: 21px;
+}
+.casedetail_info_time text{
+  font-size: 15px;
+  color: #F6A802;
+}
+.loanDetialList{
+  padding: 12px;
+  box-sizing: border-box;
+  display: flex;
+}
+.loanDetialListLeft{
+  margin-right: 20px;
+}
+.loanDetialList text{
+  display: block;
+  font-size: 12px;
+  line-height: 24px;
+}
+.loanDetialListLeft text{
+  color:#989898;
+}
+.loanDetialListRight text{
+  color: #4d4d4d;
+}

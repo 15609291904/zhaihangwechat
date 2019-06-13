@@ -1,0 +1,42 @@
+<!--pages/myclaims/myclaims.wxml-->
+<!-- <text>pages/myclaims/myclaims.wxml</text> -->
+<view class='myclaims_body'>
+  <view class='header'>
+    <view class='myclaims_head active_head'>债权</view>
+    <view class='myclaims_head' bindtap='tozhaiwu'>债务</view>
+    <view class='myclaims_head'></view>
+  </view>
+  <view class='noclaims' wx:if="{{claimslist===0}}">---- 你没有发布任何{{ searchForm.type === '1' ? '债权' : '债务' }}信息 ----</view>
+  <view class='content' wx:else>
+    <view class='item_box' wx:for="{{claimslist}}" wx:if="{{item.type==1}}" wx:key="{{index}}" data-completion="{{item.completion}}">
+      <view class='perloan'>
+        <view class='perloan_left'>{{item.claim_type[0]}} {{item.claim_num}}</view>
+        <view class='perloan_right'>{{item.claim_type[1]}}</view>
+      </view>
+      <view class='loan_total'>
+        <view class='loan_total_view'>
+          <view>{{item.amount|Int}}</view>
+          <text>本金（元）</text>
+        </view>
+        <view class='loan_total_view loan_total_view2'>
+          <view>{{item.interest|Int}}</view>
+          <text>利息（元）</text>
+        </view>
+        <view class='loan_total_view loan_total_view3'wx:if="{{item.real_name}}">
+          <image src='{{item.avatar}}'></image>
+          <text>{{item.real_name}}</text>
+        </view>
+        <view class='loan_total_view loan_total_view3' wx:else bindtap='tochoosebroker' data-id="{{item.id}}">
+          <image src='../../images/head.jpg'></image>
+          <text>找经纪人</text>
+        </view>
+      </view>
+      <view class='button_box'>
+        <button class=' myloanitembtn' bindtap='lookagreement' data-entrust_uid="{{userinfo.id}}" data-id="{{item.id}}" data-realname="{{item.real_name}}">查看协议</button>
+        <button class=' myloanitembtn' bindtap='todetail' data-id="{{item.id}}">查看进度</button>
+        <view  wx:if="{{item.completion==0}}"><button class=' myloanitembtn' bindtap='cancleclaim'  data-id="{{item.id}}" data-is_invited="{{item.is_invited}}" data-real_name="{{item.real_name}}" wx:if="{{item.is_invited}}">取消订单</button></view>
+        <button bindtap='handlepay' data-store_id="{{item.store_id}}" data-completion="{{item.completion}}" class=' myloanitembtn paybtn'>{{item.completion==0?'付款':'已完成'}}</button>
+      </view>
+    </view>
+  </view>
+</view>

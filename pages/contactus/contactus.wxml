@@ -1,0 +1,26 @@
+<!--pages/contactus/contactus.wxml-->
+<!-- <text>pages/contactus/contactus.wxml</text> -->
+ <view class="contact">
+    <image src="../../images/newLogo.png"></image>
+    <view class="title_contact">联系我们</view>
+    <view class="contact_box">
+        <text class="contact_title">邮箱：</text>
+        <text>pop300p@qq.com</text>
+    </view>
+    <!-- <view class="contact_box">
+        <text class="contact_title">传真：</text>
+        <text>pop</text>
+    </view>
+    <view class="contact_box">
+        <text class="contact_title">地址：</text>
+        <text>pop</text>
+    </view>
+    <view class="contact_box">
+        <text class="contact_title">网址：</text>
+        <text>pop</text>
+    </view> -->
+    <view class="contact_box">
+        <text class="contact_title">联系电话：</text>
+        <text>18515998481</text>
+    </view>
+</view>

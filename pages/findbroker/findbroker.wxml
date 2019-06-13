@@ -1,0 +1,115 @@
+<!--pages/findbroker/findbroker.wxml-->
+<!-- <text>pages/findbroker/findbroker.wxml</text> -->
+<view class='findbroker_body'>
+  <view class='findbroker_header'>
+    <!-- <view class='findbroker_all activetext'><text>全部</text></view>
+    <view class='findbroker_price'><text>价格</text><view class='iconfont icon--xialajiantou'></view></view>
+    <view class='findbroker_evaluate'><text>评价</text></view> -->
+    <!-- <view current="{{currentId}}" catchtap='handleTap' ></view> -->
+    <view class="findbroker_all {{item.typeId == currentId ? 'activetext':''}}" catchtap='handleTap'  wx:for="{{section}}" wx:key="{{index}}" data-id="{{item.typeId}}">{{item.name}}</view>
+    <!-- <i-tabs current="{{ current }}" bindchange="tabChange" color="#ffb924">
+      <i-tab key="1" title="全部"></i-tab>
+      <i-tab key="2" title="价格"></i-tab>
+      <i-tab key="3" title="评价"></i-tab> 
+    </i-tabs> -->
+  </view>
+  <!-- 价格 -->
+  <!-- <view class="priceBox">
+      <view class="priceBoxUl">
+          <text class="cp">不限</text>
+          <text class="cp">≤1000元</text>
+          <text class="cp">1000-1500元</text>
+          <text class="cp">1500-2000元</text>
+          <text class="cp">2000-2500元</text>
+          <text class="cp">2500-3000元</text>
+          <text class="cp">3000元-不限</text>
+      </view>
+      <view class='sure'>确认</view>
+  </view> -->
+  <!-- <view class='findbroker'>
+    <view class='findbroker_box' wx:for="{{brokerlists}}" wx:key="{{key}}" data-id="{{item.id}}" bindtap="tobrokerdetail">
+      <view class='broker_head'><image src='{{item.avatar}}'></image></view>
+      <view class='broker_info'>
+        <view class='broker_info_1'>
+          <text class='broker_info_name'>{{item.real_name}}</text>
+          <view class='iconfont icon-mingpian mingpian'></view>
+          <view class='broker_info_score'><text>{{item.score}}</text>分</view>
+        </view>
+        <view class='bio'>{{item.bio}}</view>
+      </view>
+      <view class='broker_info_price'>
+        <view class='broker_price'>￥<text class='price_num'>{{item.consult_amount|Int}}</text></view>
+        <view class='broker_price_title'>定金（元）</view>
+      </view>
+    </view>
+  </view> -->
+<view hidden='{{currentId!=1}}'>
+  <view class='findbroker'>
+    <view class='findbroker_box' wx:for="{{brokerlists}}" wx:key="{{key}}" data-id="{{item.id}}" bindtap="tobrokerdetail">
+      <view class='broker_head'><image src='{{item.avatar}}'></image></view>
+      <view class='broker_info'>
+        <view class='broker_info_1'>
+          <text class='broker_info_name'>{{item.real_name}}</text>
+          <view class='iconfont icon-mingpian mingpian'></view>
+          <view class='broker_info_score'><text>{{item.score}}</text>分</view>
+        </view>
+        <view class='bio'>{{item.bio}}</view>
+      </view>
+      <view class='broker_info_price'>
+        <view class='broker_price'>￥<text class='price_num'>{{item.consult_amount|Int}}</text></view>
+        <view class='broker_price_title'>定金（元）</view>
+      </view>
+    </view>
+  </view>
+</view>
+<view hidden='{{currentId!=2}}' class='price_body'>
+  <view class="priceBox" wx:if="{{showprice}}">
+      <view class="priceBoxUl">
+          <text class="cp" bindtap='priceselect' data-type="1">不限</text>
+          <text class="cp" bindtap='priceselect' data-type="2">≤1000元</text>
+          <text class="cp" bindtap='priceselect' data-type="3">1000-1500元</text>
+          <text class="cp" bindtap='priceselect' data-type="4">1500-2000元</text>
+          <text class="cp" bindtap='priceselect' data-type="5">2000-2500元</text>
+          <text class="cp" bindtap='priceselect' data-type="6">2500-3000元</text>
+          <text class="cp" bindtap='priceselect' data-type="7">3000元-不限</text>
+      </view>
+      <view class='sure' bindtap='priceselect'>确认</view>
+  </view>
+  <view class='findbroker' wx:if="{{showlist}}">
+    <view class='findbroker_box' wx:for="{{brokerlists}}" wx:key="{{key}}" data-id="{{item.id}}" bindtap="tobrokerdetail">
+      <view class='broker_head'><image src='{{item.avatar}}'></image></view>
+      <view class='broker_info'>
+        <view class='broker_info_1'>
+          <text class='broker_info_name'>{{item.real_name}}</text>
+          <view class='iconfont icon-mingpian mingpian'></view>
+          <view class='broker_info_score'><text>{{item.score}}</text>分</view>
+        </view>
+        <view class='bio'>{{item.bio}}</view>
+      </view>
+      <view class='broker_info_price'>
+        <view class='broker_price'>￥<text class='price_num'>{{item.consult_amount|Int}}</text></view>
+        <view class='broker_price_title'>定金（元）</view>
+      </view>
+    </view>
+  </view>
+</view>
+<view hidden='{{currentId!=3}}'>
+  <view class='findbroker'>
+    <view class='findbroker_box' wx:for="{{brokerlists}}" wx:key="{{key}}" data-id="{{item.id}}" bindtap="tobrokerdetail">
+      <view class='broker_head'><image src='{{item.avatar}}'></image></view>
+      <view class='broker_info'>
+        <view class='broker_info_1'>
+          <text class='broker_info_name'>{{item.real_name}}</text>
+          <view class='iconfont icon-mingpian mingpian'></view>
+          <view class='broker_info_score'><text>{{item.score}}</text>分</view>
+        </view>
+        <view class='bio'>{{item.bio}}</view>
+      </view>
+      <view class='broker_info_price'>
+        <view class='broker_price'>￥<text class='price_num'>{{item.consult_amount|Int}}</text></view>
+        <view class='broker_price_title'>定金（元）</view>
+      </view>
+    </view>
+  </view>
+</view>
+</view>

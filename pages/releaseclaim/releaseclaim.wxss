@@ -1,0 +1,245 @@
+/* pages/releaseclaim/releaseclaim.wxss */
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1559202814824'); /* IE9 */
+  src: url('iconfont.eot?t=1559202814824#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAKwAAsAAAAABmwAAAJlAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCCcApwgQUBNgIkAwgLBgAEIAWEbQc1G7AFyC4xhWsH0shKSIfGjZZNbwMADx/x8O9+6H1JiqgAUAJqQFVdVVkHAwkkSW96wpFxO/Osp//RWpt70wxpGn4WPyGi6XX2xPf2raGZFAmdzDUkQbJEAsjMlglrS/0p+quKxwL8N+Ca+gn0IKsDmlsnRSVHAg5sOtAOXJNtJCPfMHbBCzxPoNGAedL++u4pFBT2tEBcW0YbCoWAorB0vVDbsLaI12rUpyfpBa+i78c/RYGkJrOrjq7WerD489HJytcVuAwIQQLaXIOMOaAQZ42JA2nBuLTG7RkjQFEEP1exXRzVIthfZ5c2gz4ofSaZJ3/U0gRKMjgELE56Iqm5+/b1+/Tt5+zj7+L996rkTZNR+vh4qkl6/2xC+cMjzHvPGVv9zZH58jB76keSpKcy9CBMfgcWAarTSd4DCcEnHDbr6/8LTQV898hXnYFhLlC/W2fwe2QDO4qhsG2paLJGVzI0aWpCo0ZUsKfT11Rjz71kQr2eO3LV6c+Q1RsjCzuHGk3WUKveFhrN2tjcpAuXFqUBMx4AQrsnJK0+I2uXkIX9RI1e/6jVHmk0uoiuPZtMhFXa49QW1MPOGK1u4DPXIUpx+TEZfbfN84qId048tsKoyWo5vUE+8SUWxANDF4Ih44GH6+Ayct0AQx7Y1BWyKUTYUBTW9Ca5G3hQsocjbQLpQR1jyNIV8LGgv1CqfP4YMfS52nhHTV38HOFi1vBII1MHkBtaf1DNo1wTGzDoBIFBDBfwoHUwirhcARQ2j7KRLkFmToiFGhSnFxuqlbfXez9QwhqwTSmcqqzpxmr7tpe3MLZ8AA==') format('woff2'),
+  url('iconfont.woff?t=1559202814824') format('woff'),
+  url('iconfont.ttf?t=1559202814824') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('iconfont.svg?t=1559202814824#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-tianjia-yin:before {
+  content: "\e68f";
+}
+
+
+
+.releaseclaim_body{
+  
+}
+.step_1,.step_2,.step_3{
+  padding: 0 12px;
+}
+.messcard{
+  box-shadow: 0 4px 6px #e2e1e1;
+  border-radius: 6px;
+  padding: 16px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+.messcard_title{
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.line{
+  width: 8px;
+  height: 2px;
+  background: #f6a702;
+  margin-right: 6px;
+}
+.card_title{
+  font-size: 16px;
+  color: #000;
+  font-weight: 600;
+}
+.selectbox{
+  display: flex;
+}
+.selectbox view{
+  padding: 0 12px;
+  margin: 0 10px 12px 0;
+  background: #f8f8f8;
+  color: #d0d0d0;
+  font-size: 12px;
+  height: 25px;
+  text-align: center;
+  line-height: 24px;
+  border-radius: 20px;
+}
+.selectbox .selectactive{
+  color: #fff;
+  background: #f6a702;
+}
+.releaseclaim_body input{
+  padding: 0 20px;
+  width: 136px;
+  height: 32px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  background: #f8f8f8;
+  color: #f6a702;
+  border: 0;
+  outline: none;
+  font-size: 14px;
+}
+.messcard_title2{
+  margin-top: 15px;
+}
+.borrow_address{
+  width: 100%!important;
+}
+.nextbutton{
+  width: 200px;
+  height: 35px;
+  margin: 40px auto 70px;
+  background: #f6a702;
+  color: #fff;
+  text-align: center;
+  line-height: 34px;
+  border-radius: 20px;
+  border: 0;
+  outline: none;
+  font-size: 14px;
+}
+.borrowcycle{
+  display: flex;
+  align-items: center;
+}
+.cycle_data{
+  font-size: 16px;
+  color: #898989;
+  margin-right: 40px;
+  display: flex;
+  align-items: center;
+}
+.cycle_data image{
+  width: 20px;
+  height: 20px;
+}
+.active_cycle_data{
+  color: #f8a710;
+}
+.borrowcycle_inputbox{
+  margin-top: 15px;
+  display: flex;
+  width: 136px;
+  height: 32px;
+  border-radius: 20px;
+  background: #f8f8f8;
+  color: #7a7a7a;
+  font-size: 16px;
+  padding: 0 20px 0 0;
+  box-sizing: border-box;
+  line-height: 29px;
+}
+.borrowcycle_inputbox input{
+  color: #f6a702;
+  font-size: 14px;
+}
+.borrowcycle_inputbox text{
+  line-height: 31px;
+}
+.borrow_todo{
+  background: #f8f8f8;
+  font-size: 12px;
+  line-height: 16px;
+  color: #f6a702;
+  border-radius: 6px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100px;
+}
+.claimtype1{
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 2px solid #f9f9f9;
+  margin-bottom: 12px;
+}
+.claimtype1 view,.claimtype2 view,.appeal_box view{
+  padding: 0 12px;
+  margin: 0 10px 12px 0;
+  background: #f8f8f8;
+  color: #d0d0d0;
+  height: 25px;
+  line-height: 23px;
+  font-size: 12px;
+  border-radius: 20px;
+}
+.claimtype2,.appeal_box{
+  display: flex;
+  flex-wrap: wrap;
+}
+.claimtype1 .claimtype1_active,.claimtype2 .claimtype2_active,.appeal_box .appeal_active{
+  color: #fff;
+  background: #f6a702;
+}
+.annex_box{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+.annex{
+  width: 48%;
+  height: 90px;
+  background: #f8f8f8;
+  position: relative;
+  margin-bottom: 10px;
+  border-radius: 6px;
+}
+.annex image{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 99;
+}
+.add_annex{
+  width: 25px;
+  height: 32px;
+  font-size: 25px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  color: #f6a702;
+  z-index: 1;
+}
+.annex_title{
+  text-align: center;
+  font-size: 12px;
+  line-height: 22px;
+  color: #444444;
+}
+.annex_title view text{
+  color: #f7b226;
+}
+.remark{
+  background: #f8f8f8;
+  width: 100%;
+  height: 100px;
+  border-radius: 6px;
+  padding: 16px 20px;
+  font-size: 12px;
+  line-height: 16px;
+  box-sizing: border-box;
+}
+.agreement_claim{
+  display: flex;
+  font-size: 15px;
+  align-items: center;
+}
+.agreement_claim .agreementbtn{
+  display: flex;
+  align-items: center;
+}
+.agreement_claim .agreementbtn image{
+  width: 20px;
+  height: 20px;
+}
+.makeover{
+  color: #f6b966;
+}
+
+
+

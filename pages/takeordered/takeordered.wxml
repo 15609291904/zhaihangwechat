@@ -1,0 +1,35 @@
+<!--pages/takeordered/takeordered.wxml-->
+<!-- <text>pages/takeordered/takeordered.wxml</text> -->
+<view class='takeordered_body'>
+  <view class='header'>
+    <view class='myclaims_head'  bindtap='toweijd'>待处理</view>
+    <view class='myclaims_head active_head'>已接单</view>
+    <view class='myclaims_head'></view>
+  </view>
+  <view class='content'>
+    <view class='item_card' wx:for="{{orderlist}}" wx:key="{{index}}">
+      <view bindtap='toorderdetail' data-id="{{item.id}}">
+        <view class='perloan'>
+          <view class='perloan_left'>{{item.claim_type[0]}} {{item.claim_num}}</view>
+          <view class='perloan_right'>{{item.claim_type[1]}}</view>
+        </view>
+        <view class='loan_total'>
+          <view class='loan_total_view'>
+            <view>{{item.amount|Int}}</view>
+            <text>本金（元）</text>
+          </view>
+          <view class='loan_total_view loan_total_view2'>
+            <view>{{item.interest|Int}}</view>
+            <text>利息（元）</text>
+          </view>
+        </view>
+      </view>
+      <view class='button_box'>
+        <button bindtap='toviewagree' data-id='{{item.id}}'>委托协议</button>
+        <button bindtap='claimbind' data-id='{{item.id}}'>债事绑定</button>
+        <button bindtap='suresuccess' data-id="{{item.id}}" wx:if="{{item.completion==0}}">确认完成</button>
+        <button wx:if="{{item.completion==1}}">已完成</button>
+      </view>
+    </view>
+  </view>
+</view>

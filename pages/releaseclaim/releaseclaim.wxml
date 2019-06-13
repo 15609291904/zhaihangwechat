@@ -1,0 +1,239 @@
+<!--pages/releaseclaim/releaseclaim.wxml-->
+<!-- <text>pages/releaseclaim/releaseclaim.wxml</text> -->
+<view class='releaseclaim_body'>
+  <view class='step_1' wx:if="{{step_1}}">
+    <view class='messcard'>
+      <view class='messcard_title'>
+        <view class='line'></view>
+        <text class='card_title'>所属公司 :</text>
+      </view>
+      <view class='selectbox'>
+        <view wx:for="{{typeList}}" class="{{form.type==item.id?'selectactive':''}}" bindtap='bindtype' wx:key="{{index}}" data-type="{{item.id}}">{{item.name}}</view>
+      </view>
+    </view>
+    <view class='messcard'>
+      <view class='messcard_title'>
+        <view class='line'></view>
+        <text class='card_title'>债权人姓名 :</text>
+      </view>
+      <input placeholder='张三' bindblur='claimmanblur' value='{{form.claim_man}}'></input>
+      <view class='messcard_title messcard_title2'>
+        <view class='line'></view>
+        <text class='card_title'>手机号 :</text>
+      </view>
+      <input placeholder='182 xxxx xxxx' bindblur='claimmobileblur' value="{{form.claim_mobile}}"></input>
+    </view>
+    <view class='messcard'>
+      <view class='messcard_title'>
+        <view class='line'></view>
+        <text class='card_title'>债务人姓名 :</text>
+      </view>
+      <input placeholder='张三' value='{{form.debt_man}}' bindblur='debtmanblur'></input>
+      <view class='messcard_title messcard_title2'>
+        <view class='line'></view>
+        <text class='card_title'>手机号 :</text>
+      </view>
+      <input placeholder='182 xxxx xxxx' value="{{form.debt_mobile}}" bindblur='debtmobileblur'></input>
+    </view>
+    <view class='messcard'>
+      <view class='messcard_title'>
+        <view class='line'></view>
+        <text class='card_title'>借款时间 :</text>
+      </view>
+      <!-- <input placeholder='xxxx-xx-xx'></input> -->
+      <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+        <view class="picker">
+          <input placeholder='xxxx-xx-xx' value="{{date}}" bindtap='loantime'></input>
+        </view>
+      </picker>
+      <view class='messcard_title messcard_title2'>
+        <view class='line'></view>
+        <text class='card_title'>借款地点 :</text>
+      </view>
+      <!-- <input class='borrow_address' placeholder='请选择  省  -  市  -  区'></input>  -->
+      <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+        <view class="picker">
+          <input class='borrow_address' value="{{region[0]}}-{{region[1]}}-{{region[2]}}" bindtap='open' disabled="false" placeholder='请选择  省  -  市  -  区'></input>
+        </view>
+      </picker>
+
+    </view>
+    <button class='nextbutton' bindtap='post1'>下一步</button>
+  </view>
+
+  <view class='step_2' wx:if="{{step_2}}">
+    <view class='messcard'>
+      <view class='messcard_title'>
+        <view class='line'></view>
+        <text class='card_title'>本金 :</text>
+      </view>
+      <input placeholder='￥-' bindblur='amountblur' value="{{form.amount}}"></input>
+    </view>
+    <view class='messcard'>
+      <view class='messcard_title'>
+        <view class='line'></view>
+        <text class='card_title'>利息 :</text>
+      </view>
+      <input placeholder='￥-' bindblur="interestblur"></input>
+    </view>
+    <view class='messcard'>
+      <view class='messcard_title'>
+        <view class='line'></view>
+        <text class='card_title'>借款周期 :</text>
+      </view>
+      <view class='borrowcycle'>
+        <view class="cycle_data {{form.expire_type==1?'active_cycle_data':''}}" data-type='1' bindtap='selectexpiretype'>
+          <image src="{{form.expire_type==1?'../../images/radio-on.jpg':'../../images/radio-off.jpg'}}"></image>
+          <text>年</text>
+        </view>
+        <view class="cycle_data {{form.expire_type==2?'active_cycle_data':''}}" data-type='2' bindtap='selectexpiretype'>
+          <image src="{{form.expire_type==2?'../../images/radio-on.jpg':'../../images/radio-off.jpg'}}"></image>
+          <text>月</text>
+        </view>
+        <view class="cycle_data {{form.expire_type==3?'active_cycle_data':''}}" data-type='3' bindtap='selectexpiretype'>
+          <image src="{{form.expire_type==3?'../../images/radio-on.jpg':'../../images/radio-off.jpg'}}"></image>
+          <text>日</text>
+        </view>
+      </view>
+      <view class='borrowcycle_inputbox'>
+        <input placeholder='如 : 3 {{form.expire_text}}' value="{{form.loan_expire}}" bindblur='loanexpireblur'></input>
+        <text>{{form.expire_text}}</text>
+      </view>
+    </view>
+    <view class='messcard'>
+      <view class='messcard_title'>
+        <view class='line'></view>
+        <text class='card_title'>借款用途 :</text>
+      </view>
+      <textarea class='borrow_todo' bindblur='loanpurposeblur' value="{{form.loan_purpose}}" placeholder='请添加实际用款用途，禁止用于非消费场景，债行网保留核实的权利'></textarea>
+    </view>
+    <view class='messcard'>
+      <view class='messcard_title'>
+        <view class='line'></view>
+        <text class='card_title'>逾期原因 :</text>
+      </view>
+      <textarea class='borrow_todo' bindblur='overduememoblur' value="{{form.overdue_memo}}" placeholder='请添加逾期原因'></textarea>
+    </view>
+    <button class='nextbutton' bindtap='post2'>下一步</button>
+  </view>
+
+
+  <view class='step_3' wx:if="{{step_3}}">
+    <view class='messcard'>
+      <view class='messcard_title'>
+        <view class='line'></view>
+        <text class='card_title'>债权种类 :</text>
+      </view>
+      <view class='claimtype1'>
+        <view class="{{form.claim_type_ids_1==item.id?'claimtype1_active':''}}" bindtap="claimtype1" wx:for="{{claimType[1]}}" wx:key="{{index}}" data-id="{{item.id}}">{{item.name}}</view>
+        <!-- <view>政府机构</view>
+        <view>银行</view>
+        <view>国企</view>
+        <view>小贷公司</view> -->
+      </view>
+      <view class='claimtype2'>
+        <view class="{{form.claim_type_ids_2==item.id?'claimtype2_active':''}}" bindtap="claimtype2" wx:for="{{claimType[2]}}" wx:key="{{index}}" data-id="{{item.id}}">{{item.name}}</view>
+        <!-- <view>车</view>
+        <view>文化收藏</view>
+        <view>信誉凭证</view>
+        <view>珠宝</view> -->
+      </view>
+    </view>
+    <view class='messcard'>
+      <view class='messcard_title'>
+        <view class='line'></view>
+        <text class='card_title'>诉求 :</text>
+      </view>
+      <view class='appeal_box'>
+        <view class="{{form.appeal_type_ids==item.id?'appeal_active':''}}" bindtap='appealbtn' wx:for="{{appealType}}" wx:key="{{index}}" data-id="{{item.id}}">{{item.name}}</view>
+        <!-- <view>提货卡</view>
+        <view>代金券</view>
+        <view>储蓄卡</view> -->
+      </view>
+    </view>
+    <view class='messcard'>
+      <view class='messcard_title'>
+        <view class='line'></view>
+        <text class='card_title'>上传附件 :</text>
+      </view>
+      <view class='annex_box'>
+        <view class='annex' bindtap='selectfujian' data-type="1">
+          <image src='{{file.file1url}}'></image>
+          <view class='iconfont icon-tianjia-yin add_annex'></view>
+        </view>
+        <view class='annex' bindtap='selectfujian' data-type="2">
+          <image src='{{file.file2url}}'></image>
+          <view class='iconfont icon-tianjia-yin add_annex'></view>
+        </view>
+      </view>
+      <view class='annex_title'>
+        <view>请上传
+          <text>真实、完整、内容清晰可辨</text>的抵押物图片或借据</view>
+        <view>请认真确认后提交，以免影响认证结果</view>
+        <view>拍摄时请注意遮挡签名等重要信息，防止信息泄露</view>
+        <view>拍摄时请注意反光</view>
+      </view>
+    </view>
+    <view class='messcard'>
+      <view class='messcard_title'>
+        <view class='line'></view>
+        <text class='card_title'>备注 :</text>
+      </view>
+      <textarea class='remark' bindblur='memoblur' placeholder='可添加其他需要展示的信息（选填）'></textarea>
+    </view>
+    <view class='messcard'>
+      <view class='messcard_title'>
+        <view class='line'></view>
+        <text class='card_title'>是否设为隐私 :</text>
+      </view>
+      <view class='borrowcycle'>
+        <view class="cycle_data {{publish==1?'active_cycle_data':''}}" bindtap='ispublish' data-type="1">
+          <image src="{{publish==1?'../../images/radio-on.jpg':'../../images/radio-off.jpg'}}"></image>
+          <text>是</text>
+        </view>
+        <view class="cycle_data {{publish==2?'active_cycle_data':''}}" bindtap='ispublish' data-type="2">
+          <image src="{{publish==2?'../../images/radio-on.jpg':'../../images/radio-off.jpg'}}"></image>
+          <text>否</text>
+        </view>
+      </view>
+    </view>
+    <view class='messcard'>
+      <view class='messcard_title'>
+        <view class='line'></view>
+        <text class='card_title'>是否选择经纪人 :</text>
+      </view>
+      <view class='borrowcycle' >
+        <view class="cycle_data {{invite==1?'active_cycle_data':''}}" bindtap='isinvite' data-type="1">
+          <image src="{{invite==1?'../../images/radio-on.jpg':'../../images/radio-off.jpg'}}"></image>
+          <text>是</text>
+        </view>
+        <view class="cycle_data {{invite==2?'active_cycle_data':''}}" bindtap='isinvite' data-type="2">
+          <image src="{{invite==2?'../../images/radio-on.jpg':'../../images/radio-off.jpg'}}"></image>
+          <text>否</text>
+        </view>
+      </view>
+    </view>
+    <view class='agreement_claim'>
+      <view class='agreementbtn' bindtap='agreementzr'>
+        <image src="{{agreementzr?'../../images/radio-on.jpg':'../../images/radio-off.jpg'}}"></image>
+        已阅读并同意
+      </view>
+      <view class='makeover'>《债权转让相关协议》</view>
+    </view>
+    <button class='nextbutton' bindtap='is_invitebroker'>下一步</button>
+  </view>
+
+
+
+
+  <!-- <radio-group class="radio-group" bindchange="radioChange">
+            <label class="radio">
+                <radio color='#fff' checked="false"/>
+            </label>
+          </radio-group> -->
+
+
+
+
+ 
+</view>

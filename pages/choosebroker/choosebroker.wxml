@@ -1,0 +1,37 @@
+<!--pages/choosebroker/choosebroker.wxml-->
+<!-- <text>pages/choosebroker/choosebroker.wxml</text> -->
+
+  <!-- 选择经纪人 -->
+  <view class='select_broker'>
+    <view class='select_broker_body'>
+      <view class='select_title'>选择经纪人</view>
+      <view class='broker_messcard' wx:for="{{brokerlists}}" wx:key="{{index}}">
+        <view class='select_broker_btn' bindtap='selectradio' data-id='{{item.id}}'>
+          <radio-group class="radio-group">
+            <label class="radio">
+              <radio checked="" color='#F6A802' />
+            </label>
+          </radio-group>
+        </view>
+        <view class='broker_head' bindtap='todetail' data-id="{{item.id}}">
+          <image src='{{item.avatar}}'></image>
+        </view>
+        <view class='broker_info'>
+          <view class='broker_info_1'>
+            <text class='broker_info_name'>{{item.real_name}}</text>
+            <view class='iconfont icon-mingpian mingpian'></view>
+            <view class='broker_info_score'>
+              <text>{{item.score}}</text>分</view>
+          </view>
+          <view class='bio'>{{item.bio}}</view>
+        </view>
+        <view class='broker_info_price'>
+          <view class='broker_price'>￥
+            <text class='price_num'>{{item.consult_amount|Int}}</text>
+          </view>
+          <view class='broker_price_title'>定金（元）</view>
+        </view>
+      </view>
+    </view>
+    <view class='nexttoagreement' bindtap='invitebroker'>下一步</view>
+  </view>
