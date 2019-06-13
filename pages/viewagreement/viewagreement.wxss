@@ -1,0 +1,71 @@
+/* pages/viewagreement/viewagreement.wxss */
+.viewagree_body{
+  padding: 0 12px;
+}
+.clause_name{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+}
+.first_party_title,.second_party_title{
+    font-size: 15px;
+}
+/* .first_party_name,.second_party_name{
+    width:80px;
+} */
+.first_party_name{
+    
+}
+.second_party_address{
+    width: 310px;
+}
+.first_party_phone,.second_party_phone,.second_party_fax{
+    width: 100px;
+}
+.first_party_email,.second_party_email{
+    width: 130px;
+}
+.second_party_code{
+    width: 120px;
+}
+.rules{
+    /* text-indent: 2em; */
+}
+.rule_box_title{
+    /* text-indent: 2em; */
+}
+.rule_box_content{
+    text-indent: 2em;
+}
+.servemoney{
+  display: flex;
+}
+.serviceFee{
+  display: inline-block;
+  border-bottom: 1px solid #000;
+  width: 80px;
+  text-align: center;
+  height: 15px;
+}
+.serviceFee_capital{
+  display: inline-block;
+  border-bottom: 1px solid #000;
+  width: 140px;
+  text-align: center;
+  height: 15px;
+}
+.rule_box_content_list_rules{
+  text-indent: 2em;
+}
+.flex{
+  display: flex;
+}
+text,view{
+  font-size: 15px;
+  display: block;
+  line-height: 20px;
+}
+.second_party image{
+  max-width: 100px;
+  max-height: 100px;
+}

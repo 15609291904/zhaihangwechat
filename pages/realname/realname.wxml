@@ -1,0 +1,66 @@
+<!--pages/realname/realname.wxml-->
+<!-- <text>pages/realname/realname.wxml</text> -->
+<view class='body'>
+  <view class='realname_body'>
+    <view class='realname_namecard'>
+      <view class='name_card'>
+        <view class='line'></view>
+        <text class='name_card_title'>您的姓名 :</text>
+      </view>
+      <input class='name_card_input' value='{{form.real_name}}' bindblur='nameblur' placeholder='张三' style='width: 96px;'></input>
+    </view>
+    <view class='realname_numbercard'>
+      <view class='name_card'>
+        <view class='line'></view>
+        <text class='name_card_title'>您的证件号 :</text>
+      </view>
+      <input class='number_card_input' type='idcard' bindblur='codeblur' value='{{form.cert_code}}' placeholder="210123199xxxxx2222" style="width: 180px;"></input>
+    </view>
+    <view class='messCard'>
+      <view class='name_card'>
+        <view class='line'></view>
+        <text class='name_card_title'>上传证件照 :</text>
+      </view>
+      <view class='uploadbox '>
+        <view class='uploadimg realname_img1' bindtap='selectedimg' data-type='1'>
+          <image class='uploadimg_bg' src='../../images/iden1.png'></image>
+          <image class='uploadimg_card' src='{{form.front_cover}}'></image>
+          <view class='iconfont icon-tianjia-yin uploadicon'></view>
+          <view class='uploadimg_title'>身份证正面</view>
+        </view>
+        <view class='uploadimg realname_img1' bindtap='selectedimg' data-type='2'>
+          <image class='uploadimg_bg' src='../../images/iden2.png'></image>
+          <image wx:if="{{form.back_cover}}" class='uploadimg_card' src='{{form.back_cover}}'></image>
+          <view class='iconfont icon-tianjia-yin uploadicon'></view>
+          <view class='uploadimg_title'>身份证反面</view>
+        </view>
+        <view class='uploadimg realname_img1' bindtap='selectedimg' data-type='3'>
+          <image class='uploadimg_bg' src='../../images/iden3.png'></image>
+          <image wx:if="{{form.hand_cover}}" class='uploadimg_card' src='{{form.hand_cover}}'></image>
+          <view class='iconfont icon-tianjia-yin uploadicon'></view>
+          <view class='uploadimg_title'>身份证反面</view>
+        </view>
+      </view>
+      <view class='uploadAttachWord'>
+          手持证件照片是指同时手持<text>身份证证件</text>和<text
+              >写有
+              当天日期的纸条</text
+          >并拍摄的非镜像照片
+          认证申请会在 24小时内 审核完毕，节
+          假日可能会有延迟。您可以随时在该页面查看
+          认证结果
+      </view>
+    </view>
+    <button class="next1Button fabuButton" bindtap='sendrealname'>下一步</button>
+  </view>
+  <view class='checkbox_body' wx:if="{{!isSuccess}}"  wx:if="{{userinfo.is_cert}}">
+    <view class='checkbox'>
+      <image class='checkimages' src='../../images/checkCard1.jpg'></image>
+      <text class='checkbox_title1'>您的发布资料正在审核中</text>
+      <text class='checkbox_title2'>审核结束后，我们会及时反馈结果\n请稍后再试~</text>
+      <view class='backtoprev' bindtap='backtoprev'>返回</view>
+    </view>
+    <view class='iconfont icon-guanbi closebtn_toprev' bindtap='backtoprev'></view>
+  </view>
+
+</view>

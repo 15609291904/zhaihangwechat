@@ -1,0 +1,107 @@
+<!--pages/tobebroker/tobebroker.wxml-->
+<!-- <text>pages/tobebroker/tobebroker.wxml</text> -->
+<view class='body'>
+  <view class='tobebroker_body'>
+    <view class='tobebroker_header'>申请成为经纪人</view>
+    <view class='messcard'>
+      <view class='messcard_title'>
+        <view class='line'></view>
+        <text class='card_title'>所在城市 :</text>
+      </view>
+      <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+        <view class="picker">
+          <input class='selectcity' value="{{region[0]}}-{{region[1]}}-{{region[2]}}" bindtap='open' disabled="false" placeholder='请选择  省  -  市  -  区'></input>
+        </view>
+      </picker>
+    </view>
+    <view class='messcard'>
+      <view class='messcard_title'>
+        <view class='line'></view>
+        <text class='card_title'>所属公司 :</text>
+      </view>
+      <view class='selectcompany'>
+        <view class='selectradio'>
+          <!-- <radio class='a_radio'></radio> -->
+          <!-- <view class='selectcompany_radio'>
+            <view class='selectcompany_radio_checked'></view>
+          </view> -->
+          <radio-group class="radio-group" bindchange="radioChange">
+            <label class="radio">
+              <radio checked="{{checked}}" color='#F6A802' />
+            </label>
+          </radio-group>
+          <text>企业</text>
+        </view>
+        <view class='messcard_title' wx:if="{{storeshow}}">
+          <view class='line'></view>
+          <text class='card_title'>所属门店组 :</text>
+        </view>
+        <view class='select_box' wx:if="{{storeshow}}">
+          <view class='shopselect' catchtap='selectTap'>
+            <text>{{index==-1?'请先选择门店':selectData[index].store_name}}</text>
+            <view class='iconfont icon-jiantou'></view>
+          </view>
+          <view class='option_box' style='height:{{show?(selectData.length>5?300:selectData.length*60):0}}rpx;'>
+            <text class='option' style='{{index==selectData.length-1&&"border:0;"}}' wx:for='{{selectData}}' wx:key='this' data-index='{{index}}' data-id="{{item.id}}" catchtap='optionTap'>{{item.store_name}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='messcard'>
+      <view class='messcard_title'>
+        <view class='line'></view>
+        <text class='card_title'>从业资格证 :</text>
+      </view>
+      <view class='jobcard_box'>
+        <view class='jobcard' bindtap='selectedimg' data-type='1'>
+          <image class='uploadimg_card' src='{{form.cert_cover}}'></image>
+          <view class='iconfont icon-tianjia-yin uploadicon'></view>
+          <view class='uploadimg_title'>从业资格证</view>
+        </view>
+        <view class='jobcard' bindtap='selectedimg' data-type='2'>
+          <image class='uploadimg_card' src='{{form.hand_cover}}'></image>
+          <view class='iconfont icon-tianjia-yin uploadicon'></view>
+          <view class='uploadimg_title'>从业资格证</view>
+        </view>
+      </view>
+    </view>
+    <view class='agreementbtn'>
+      <!-- <radio class='a_radio'></radio> -->
+      <view class='agreementbtn_checked' style="color:{{agreement?'#f6a702':'#909090'}}">
+        <image src="{{agreement?'../../images/radio-on.jpg':'../../images/radio-off.jpg'}}" bindtap='agreementbtn'></image>
+        已阅读并同意
+      </view>
+      <text class='broker_agreement'>《经纪人相关协议》</text>
+    </view>
+    <button class='success_broker' bindtap='sendtobebroker'>完成</button>
+
+
+
+    <!-- <view wx:if="{{condition}}" class="citypicker">
+      <picker-view indicator-style="height: 50px;" style="width: 100%; height: 300px;" value="{{value}}" bindchange="bindChange" class="citybody">
+        <view class="cityheader">
+          <view bindtap="open" class="city-cancel">取消</view>
+          <view bindtap="open" class="city-true">确定</view>
+        </view>
+        <picker-view-column>
+          <view wx:for="{{provinces}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}            </view>
+        </picker-view-column>
+        <picker-view-column>
+          <view wx:for="{{citys}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+        </picker-view-column>
+        <picker-view-column>
+          <view wx:for="{{countys}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}                </view>
+        </picker-view-column>
+      </picker-view>
+    </view> -->
+  </view>
+  <view class='checkbox_body' wx:if="{{brokerisSuccess}}">
+    <view class='checkbox'>
+      <image class='checkimages' src='../../images/checkCard1.jpg'></image>
+      <text class='checkbox_title1'>您的发布资料正在审核中</text>
+      <text class='checkbox_title2'>审核结束后，我们会及时反馈结果\n请稍后再试~</text>
+      <view class='backtoprev' bindtap='backtoprev'>返回</view>
+    </view>
+    <view class='iconfont icon-guanbi closebtn_toprev' bindtap='backtoprev'></view>
+  </view>
+</view>
